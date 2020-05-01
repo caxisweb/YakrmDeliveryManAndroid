@@ -1,0 +1,512 @@
+<resources>
+    <string name="app_name">Yakrm Delivery Man</string>
+    <string name="startadventure">Start the adventure</string>
+    <string name="Signup">Sign Up</string>
+    <string name="skip_i_tnow">Skip it now</string>
+    <string name="buying_gift_cards">Buying gifts cards</string>
+    <string name="buying_gift_cards_with_competitive_prices">Buy gift cards with competitive prices and discounts and from international brands</string>
+    <string name="new_account">New account</string>
+    <string name="step_1_verify_your_mobile">step 1: verify your mobile number</string>
+    <string name="step_1_verify_your_mobile_number">step 2: verify your mobile number</string>
+    <string name="Choose_the_country">Choose the country:</string>
+    <string name="Can_you_enter_your_mobile_number_please">Can you enter your mobile number, please?</string>
+    <string name="When_you_register_a_new_account_you_are_accepting_usage_agreement_and_the_application_privacy_policy">When you register a new account, you are accepting usage agreement and the application privacy policy</string>
+    <string name="Usage_Agreememnt">usage agreement</string>
+    <string name="privacy_policy">privacy policy</string>
+    <string name="Send">Send</string>
+    <string name="If_you_have_already_an_account_long_in">Already have an account? log in</string>
+    <string name="log_in">log in</string>
+    <string name="Enter_the_secret_code_which_is_sent_to_you">Enter the secret code which is sent to you</string>
+    <string name="Verify">Verify</string>
+    <string name="You_do_not_own_this_mobile_change_the_number">You do not own this mobile?change the number</string>
+    <string name="change_the_number">change the number</string>
+    <string name="Step_2_Complete_your_personal_data">Step 1: Complete your personal data</string>
+    <string name="name">name:</string>
+    <string name="enter_your_full_name_please">enter your full name, please</string>
+    <string name="email">Email:</string>
+    <string name="password">Password:</string>
+    <string name="Sign_up_a_new_account">Sign up a new account</string>
+    <string name="SR_currency">SR</string>
+
+    <string name="video_saved_at">Video saves at : $%1s</string>
+    <string name="label_select_video">Select Video</string>
+    <string name="toast_cannot_retrieve_selected_video">Cannot retrieve selected video</string>
+
+    <string name="Step_1_Enter_your_login_data">Enter your login data</string>
+    <string name="email_address">Email address</string>
+    <string name="Log_in">Log in</string>
+    <string name="Do_not_have_an_account">Do not have an account?</string>
+    <string name="Forget_password">Forget password?</string>
+    <string name="Step_2_verifying_mobile_number">Step 2: verifying mobile number</string>
+    <string name="Return">Return</string>
+    <string name="Personal_data">Personal data</string>
+    <string name="AhmedSaidAbdelRahman">Ahmed Said Abdel Rahman</string>
+    <string name="Country">Country:</string>
+    <string name="Saudi_Arabia">Saudi Arabia</string>
+    <string name="Mobile_number">Mobile number:</string>
+    <string name="Modify_data">Modify data</string>
+
+    <string name="Buy">Buy</string>
+    <string name="Received">Received</string>
+    <string name="Replace">Replace</string>
+    <string name="Auction">Auction</string>
+    <string name="My_Wallet">My Wallet</string>
+
+
+    <string-array name="selectcountry">
+        <item>Saudi Arabia</item>
+    </string-array>
+    <string name="title_activity_main">Main</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="filter_the_results">advanced search</string>
+    <string name="The_most_popular_gifts">The most popular gifts</string>
+    <string name="brand_address_is_here_discount_till_4">(brand address is here, discount till 4%)</string>
+    <string name="Gifts_classification">Gifts classification</string>
+    <string name="Filter_search_results">Filter search results</string>
+    <string name="Cuisine">Cuisine</string>
+    <string name="books_and_magazines">Books and Magazines</string>
+    <string name="coffee">coffee</string>
+    <string name="Stores_and_groceries">Stores and  groceries</string>
+    <string name="children_toys">children toys</string>
+    <string name="fashion_and_uniforms">fashion and uniforms</string>
+    <string name="Care_and_makeup_centers">Care and makeup centers</string>
+    <string name="Hotels_and_tourism">Hotels and tourism</string>
+    <string name="Sport_clothes">Sport clothes</string>
+    <string name="phones_and_electronics">phones and electronics</string>
+    <string name="sport_tools">sport tools</string>
+    <string name="Clothes">Clothes</string>
+    <string name="jewelries_and_golden">jewelries and golden</string>
+    <string name="others">others</string>
+
+    <string name="Gift_type">Gift type</string>
+    <string name="Electronic_gift">Electronic gift</string>
+    <string name="Paper_gift">Paper gift</string>
+
+    <string name="Gift_order">Gift order</string>
+    <string name="Most_popular">Most popular</string>
+    <string name="High_discounted">High discounted</string>
+    <string name="Brand_names">Brand names</string>
+
+    <string name="Filter">Filter</string>
+    <string name="Delete">Delete</string>
+
+    <string name="Gift_details">Gift details</string>
+    <string name="Saudi_Arabic_airlines">Saudi Arabic airlines</string>
+    <string name="Electronic_and_paper_gifts">Electronic and paper gifts</string>
+    <string name="Information_about_the_gift_giver">Information about the gift giver</string>
+
+    <string name="Value">Value</string>
+    <string name="discount">Discount</string>
+    <string name="pay">pay</string>
+    <string name="Added_to_the_buying_basket_successfully">Added to the buying basket successfully </string>
+
+
+    <string name="Zero_SR">0 SR</string>
+    <string name="SR">100SR</string>
+    <string name="SR2">200SR</string>
+    <string name="SR3">250SR</string>
+    <string name="SR4">486SR</string>
+    <string name="S5">5%</string>
+    <string name="Compete_the_purchase">Compete the purchase</string>
+    <string name="Research">Search</string>
+    <string name="Enter_the_brand_name">Enter the brand name</string>
+    <string name="Sharing">Sharing</string>
+    <string name="Favorites">Favorites</string>
+
+    <string name="Cart_empty">The basket(empty)</string>
+    <string name="Cart">The Basket</string>
+    <string name="The_basket_is_empty">The basket is empty</string>
+    <string name="There_is_no_Purchases_in_the_buying_basket">There is no Purchases in the buying basket</string>
+    <string name="Start_Purchasing">Start Purchasing</string>
+
+    <string name="four_elements_the_basket">(four elements) the basket</string>
+    <string name="STABUCKSCARD_electronic_and_paper_gifts">STABUCKSCARD  (electronic and paper gifts)</string>
+    <string name="Ended_in_12_12_2018">Ended in 12/12/2018</string>
+    <string name="The_value">The value :</string>
+    <string name="sr">2500 SR</string>
+    <string name="Discount">Discount :</string>
+    <string name="The_price">The price :</string>
+    <string name="s_r">2420 SR</string>
+    <string name="pay_now">Pay now</string>
+    <string name="Total">Total</string>
+    <string name="new_sr">8150 SR</string>
+
+
+    <string name="Completing_Purchasing">Purchase</string>
+    <string name="Your_Amount">Balance</string>
+    <string name="amount_sr">155 Sr</string>
+    <string name="Total_Amount">Total Amount</string>
+    <string name="Sr">Sr</string>
+    <string name="The_Amount_Will_Be_Deduced_From_Your_Current_Account">The Amount Will Be Deduced From Your Current Account</string>
+    <string name="Completing_Payment">Completing Payment</string>
+    <string name="The_Process_Is_Carried_Out_Successfully">The Process Is Carried Out Successfully</string>
+    <string name="Something_Wrong_Occur_AndProcess_Is_Not_Finished_Yet">Something Wrong Occur And The Process Is Not Finished Yet</string>
+    <string name="Your_Current_Amount_Is_Not_Enough_To_Carry_Out_Purchasing_Process">Your Current Amount Is Not Enough To Carry Out Purchasing Process</string>
+    <string name="Charge_Your_Account_Balance">Charge Your Account Balance</string>
+    <string name="By_Using_Pay_Pal">By Using Pay Pal</string>
+    <string name="By_Using_Mada_Card">By Using Mada Card</string>
+    <string name="By_Using_Visa_Card">By Using Visa Card</string>
+    <string name="digits">**** **** **** 5678</string>
+    <string name="By_Using_Credit_Card">By Using Credit Card</string>
+    <string name="Sent_By_Your_Friend_Mahmoud_Abd_El_Rahman">Sent By Your Friend:</string>
+    <string name="Hello_Friend_I_Am_SendingThis_Voucher_To_Express_My_Love">Hello Friend. I Am Sending You This Voucher To Express My Love And Gratitude For You As A Friend</string>
+    <string name="I_Hope_That_You_Will_Be_Happy_During_Every">I Hope That You Will Be Happy During Every Single Moment Of Your Life</string>
+    <string name="Attached_Video">Attached Video</string>
+    <string name="Press_To_Watch">Press To Watch</string>
+
+
+    <string name="Upload_Voucher">Upload Voucher</string>
+    <string name="Your_current_balance">Your current balance</string>
+    <string name="Discount_vouchers">Active vouchers</string>
+    <string name="Active">Active</string>
+    <string name="Vendors_of_vouchers">Favorite vouchers</string>
+    <string name="Favorite">Favorite</string>
+    <string name="Vouchers_ended">Vouchers ended</string>
+    <string name="Already_valid">Already valid</string>
+    <string name="Vouchers_That_Have_Already_Ended">Vouchers That Have Already Ended</string>
+    <string name="Done">Done</string>
+    <string name="Active_coupons">Active coupons</string>
+    <string name="Sr_Stabuckscard">25 Sr</string>
+    <string name="Voucher_Number">Voucher Number 1</string>
+    <string name="Active_Till">Active Till </string>
+    <string name="Voucher_Till">Voucher Till </string>
+    <string name="New_Sr">25 Sr</string>
+
+
+    <string name="replace_voucher">Replace voucher</string>
+    <string name="Voucher_number">Voucher Number </string>
+    <string name="Pin_Number">Pin Number </string>
+    <string name="General_Instructions">General Instructions</string>
+    <string name="Here_You_Find_Vouchers_For_Discount_Send_By_Your_Friends">Here, You Find Vouchers For Discount, Send By Your Friends</string>
+    <string name="You_Can_Transform_It_Into_Voucher_Cards">You Can Transform It Into Voucher Cards And Using It In Purchasing And Discounts</string>
+    <string name="Discount_Voucher">Discount Vouchers</string>
+    <string name="Upload_Vouchers_Choose_The_Brand">Upload Vouchers- Choose The Brand</string>
+
+
+    <string name="Upload_Voucher_Voucher_Data">Upload Voucher- Voucher Data</string>
+    <string name="Scan_The_Card_To_Bring_The_Data_Automatically">Scan The Card To Bring The Data Automatically</string>
+    <string name="Scan_The_Photo">Scan The Photo</string>
+    <string name="Enter_Data_Manually_In_Case_Scanning_Is_Failed">Enter Data Manually In Case Scanning Is Failed</string>
+    <string name="Voucher_Value">Voucher Value </string>
+    <string name="Available_Till">Available Till </string>
+    <string name="January">25 January 2019</string>
+    <string name="Adding_To_My_Notecase">Adding To My Notecase</string>
+
+
+    <string name="Exchange_A_Discount_Voucher">Exchange A Discount Voucher</string>
+    <string name="Send_For_A_Friend_As_A_Gift">Send For A Friend As A Gift</string>
+    <string name="Exchange_And_Add_The_Amount_On_Your_Balance">Exchange And Add The Amount On Your Balance</string>
+    <string name="Display_The_Voucher_On_An_Auction">Display The Voucher On An Auction</string>
+    <string name="Return_Voucher_Add_The_Amount_On_Your_Balance">Return Voucher Add The Amount On Your Balance</string>
+
+
+    <string name="Send_to_a_friend">Send to a friend</string>
+    <string name="Friend_mobile_number">Friend mobile number</string>
+    <string name="Friend_information">Friend information</string>
+    <string name="Name">Name :</string>
+    <string name="Mahmoud_Abd_El_Mot_al">Mahmoud Abd El-Mot\'al</string>
+    <string name="Email_Address">Email Address :</string>
+    <string name="Sending_Date">Sending Date</string>
+    <string name="Hello_Friend_I_Am_Sending_You_This_Voucher_To_Express_My_Love_And_Gratitude">Hello Friend. I Am Sending You This Voucher To Express My Love And Gratitude For You As A Friend</string>
+    <string name="I_Hope_That_You_Will_Be_Happy">I Hope That You Will Be Happy During Every Single Moment Of Your Life</string>
+    <string name="Completing_The_Sending_Process">Completing The Sending Process</string>
+
+
+    <string name="Exchanging_And_add_to_my_balance">Exchanging And Add to my balance</string>
+    <string name="Return_Voucher">Return Voucher</string>
+    <string name="How_Much_You_Will_Exchange_The_Amount">How Much You Will Exchange The Amount?</string>
+    <string name="You_Will_Get_The_Amount_Of">You Will Get The Amount Of</string>
+    <string name="SR_only">8.5 SR only</string>
+    <string name="Completing_Exchange_Process">Completing Exchange Process</string>
+
+
+    <string name="Main_Page">Main Page</string>
+    <string name="My_Personal_Account">My Personal Account</string>
+    <string name="Active_Vouchers">Active Vouchers</string>
+    <string name="Favorite_Vouchers">Favorite Vouchers</string>
+    <string name="Best_Brands">Best Brands</string>
+    <string name="Transactions_Record">Transactions Record</string>
+    <string name="Auctions">Auctions</string>
+    <string name="Payment_Methods">Payment Methods</string>
+    <string name="Support_And_Contact">Support And Contact</string>
+    <string name="About_The_Application">About The Application</string>
+    <string name="Instructions_And_Conditions">Instructions And Conditions</string>
+    <string name="Sign_Out">Sign Out</string>
+    <string name="English_Version">النسخة العربية</string>
+    <string name="Share_With_Your_Friends">Share With Your Friends</string>
+
+
+    <string name="Favorite_Brands_Of_Vouchers">Favorite Brands Of Vouchers</string>
+
+
+    <string name="Vouchers_Will_end_Very_Soon">Vouchers Will end Very Soon</string>
+    <string name="Available_till_date">Available till 13/12/2018</string>
+    <string name="For_The_Coming_Days_Only">(For The Coming 2 Days Only)</string>
+    <string name="Vouchers_That_Have_Ended">Vouchers already ended</string>
+
+
+    <string name="Notifications">Notifications</string>
+    <string name="New">New</string>
+    <string name="System_Administrator">System Administrator: My Dear, We Hope That Your Complete Your Personal Information To Compete Registration Process</string>
+    <string name="Minutes_ago">8 Minutes ago</string>
+    <string name="Yesterday">Yesterday</string>
+    <string name="Dec_18">B110-Dec-18</string>
+
+
+    <string name="Financial_Transactions_Record">Financial Transactions Record</string>
+
+
+    <string name="Contact_And_Support">Contact And Support</string>
+    <string name="Any_Questions_Ideas_Or_Evaluations">Any Questions, Ideas, Or Evaluations?</string>
+    <string name="Contact_With_And_Send_To_Us">Contact With And Send To Us</string>
+    <string name="Message_Title">Message Title</string>
+    <string name="Message_Details">Message Details</string>
+
+
+    <string name="Exchange_Instructions">Exchange Instructions</string>
+    <string name="Received_Vouchers">Received Vouchers</string>
+    <string name="You_Can_Transform_It_Ito_Walet_Cards_And_Use_It_In_purchasing_And_Discount_Process">You Can Transform It Into Wallet Cards And Use It In purchasing And Discount Process</string>
+    <string name="Auctions_Instructions">Auctions\' Instructions</string>
+    <string name="Here_You_Find_Voucher_Cards_Friend">Here, You Find Voucher Cards  Sent By Your Friends</string>
+    <string name="Other_Instructions">Other Instructions</string>
+
+
+    <string name="About_Yakrm">About Yakrm</string>
+    <string name="Idea_of_Yakrm">Idea of Yakrm</string>
+    <string name="Version_Number">Version Number: 1.0.0</string>
+
+    <string name="Auctions_Of_Other">Auctions Of Other</string>
+    <string name="Auction_On_My_Vouchers">Auction On My Vouchers</string>
+    <string name="Active_Now">Active Now</string>
+    <string name="Win">Win</string>
+    <string name="Lost">Lost</string>
+    <string name="Valid_Till">Valid Till 13/12/2018</string>
+    <string name="SR_discount_voucher">25 SR discount voucher- The Owner: Mahmoud Abd-Allah</string>
+
+    <string name="Introduce_Your_Auction_With_Value">Introduce Your Auction With Value:</string>
+    <string name="Auction_With_Value">Auction With Value 30 SR</string>
+    <string name="Auction_Number">Auction Number: 18</string>
+    <string name="Remaining">Remaining 15 H 25 M</string>
+    <string name="Abed_El_Rahman_Fawzi_Wins_The_Auction">Abed El-Rahman Fawzi Wins The Auction. The Value Is 75 SR</string>
+    <string name="Your_Auction_Value">Your Auction\'s Value Was 65 SR</string>
+
+
+    <string name="View_Auction_Voucher">View Auction\'s Voucher</string>
+    <string name="Your_Voucher_Will_Be_Uploaded_For_Auction_Other_Will_Compete_To_Win_It">Your Voucher Will Be Uploaded For Auction. Other Will Compete To Win It</string>
+    <string name="Auction_Duration">Auction Duration: 3 Days</string>
+    <string name="The_Lowest_Value_for_Increase_Is">The Lowest Value for Increase Is 5 SR</string>
+    <string name="Terms_and_Condition"><![CDATA[Terms & Condition]]></string>
+    <string name="Accept">Accept</string>
+
+    <string name="Last_Auction">Last Auction: 25 SR</string>
+
+    <string name="Ended">Ended On</string>
+    <string name="The_Number_Of_The_Auctions">The Number Of The Auctions: 18</string>
+    <string name="Abed_El_Rahman_Fawzi_Wins_The_Auction_The_Value_Is">Abed El-Rahman Fawzi Wins The Auction. The Value Is 75 SR</string>
+    <string name="User_Agreement_And_Privacy_Policy">User Agreement And Privacy Policy</string>
+    <string name="User_Agreement">User Agreement</string>
+    <string name="Privacy_Policy">Privacy Policy</string>
+    <string name="Save">Save</string>
+    <string name="discount_till">Discount till</string>
+    <string name="Endingon">Ending On</string>
+
+    <string name="_0_sr">0 SR</string>
+    <string name="Payment_method">Payment Methods</string>
+    <string name="there_is_no_any_payment_method_added_in_your_account">There Is No Any Payment Method Added In Your Account</string>
+    <string name="Adding_A_Payment_Method">Adding A Payment Method</string>
+    <string name="Card_Holder_Name">Card Holder Name</string>
+    <string name="Card_Number">Card Number</string>
+    <string name="Security_Number">Security Number</string>
+    <string name="Expiry_Date">Expiry Date</string>
+    <string name="Add">Add</string>
+    <string name="Current_payment_methods">Current payment methods</string>
+    <string name="Add_Another_Method">Add Another Method</string>
+    <string name="Change_password">Change password</string>
+    <string name="Enter_Old_password">Enter Old password</string>
+    <string name="Enter_New_password">Enter New password</string>
+
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+    <string name="CVV">CVV</string>
+    <string name="wallet_amount_is_0_and_ammount_to_be_paid_is">wallet amount is 0 and the amount to be paid is :</string>
+    <string name="by_visa">By Visa :</string>
+    <string name="by_wallet">By Wallet :</string>
+    <string name="confirm_new_password">Confirm New password</string>
+    <string name="Confirm_new_password">Enter Confirm password</string>
+    <string name="Please_Enter_Email">Please Enter Email</string>
+    <string name="Please_Enter_Password">Please Enter Password</string>
+    <string name="Server_Error">Server Error</string>
+    <string name="Please_Wait">Please Wait</string>
+    <string name="Please_Enter_Mobile_Number">Please Enter Mobile Number</string>
+    <string name="Mobile_Number_should_be_minimum">Mobile Number should be minimum of 10 characters</string>
+    <string name="Please_Enter_OTP">Please Enter OTP</string>
+    <string name="Please_Enter_Name">Please Enter Full Name</string>
+    <string name="Name_should_be_minimum_of_three_characters">Name should be  minimum of 3 characters</string>
+    <string name="Please_Enter_Valid_Email">Please Enter Valid Email</string>
+    <string name="Password_should_be_minimum_of_six_characters">Password should be  minimum of 6 characters</string>
+    <string name="Please_Select_atleast_one_filter_category_from_above">Please Select atleast one filter category from above</string>
+    <string name="No_Internet_Connection">No Internet Connection</string>
+    <string name="Take_Photo">Take Photo</string>
+    <string name="Choose_from_Gallery">Choose from Gallery</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Add_Photo">Add Photo!</string>
+    <string name="PleaseEnterCardHolderName">Please Enter CardHolder Name</string>
+    <string name="PleaseEnterValidName">Please Enter Valid Name</string>
+    <string name="PleaseEnterCardNumber">Please Enter CardNumber</string>
+    <string name="PleaseEnterCorrectCardNo">Please Enter Correct Card no</string>
+    <string name="PleaseEnterCardExpirydate">Please Enter Card Expiry date</string>
+    <string name="PleaseEnterSecurityNumber">Please Enter Security Number</string>
+    <string name="PleaseEnterCorrectSecurityNumber">Please Enter Correct Security Number</string>
+    <string name="AreYouSureToLogout">Are you Sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="VoucherScannedSuccessfully">Voucher Scanned Successfully</string>
+    <string name="EnterVoucherNumber">Enter Voucher Number</string>
+    <string name="recordvideofromcamera">Record video from camera</string>
+    <string name="selectvideofromgallery">Select video from gallery</string>
+    <string name="addvideo">Add Video!</string>
+    <string name="pleasecheckexpirydate">Please Check Expiry Date</string>
+    <string name="pleaseentervalidcardnumber">Please Enter Valid Card Number</string>
+    <string name="youcannotsendgifted">You can\'t send gifted voucher to a friend.</string>
+    <string name="PleaseEnterValidCardNo">Please Enter Valid Card Number</string>
+    <string name="resend">Resend</string>
+    <string name="You_have_few_items_in_the_cart_to_purchase">You have product in the basket</string>
+    <string name="Purchase_Voucher">Purchase Voucher</string>
+    <string name="Mobile_number_should_start_with_05">Mobile number should start with \'05\'</string>
+    <string name="More">...more</string>
+    <string name="Less">...less</string>
+    <string name="Debited">DEBITED</string>
+    <string name="Credited">CREDITED</string>
+    <string name="ReturnedVoucher">Returned Voucher</string>
+    <string name="PurchasedVoucher">Purchased Voucher</string>
+    <string name="ReplacedVoucher">Replaced Voucher</string>
+    <string name="GiftedVoucher">Gifted Voucher</string>
+    <string name="no_internet_connection">no internet connection</string>
+
+    <!--Payment getway message-->
+    <string name="checkout_ui_callback_scheme">livemosab</string>
+    <string name="payment_button_callback_scheme">paymentbutton</string>
+    <!--<string name="custom_ui_callback_scheme">customui</string>-->
+    <string name="custom_ui_callback_scheme">livemosab</string>
+
+    <string name="checkout_ui_title">Ready-to-Use UI</string>
+    <string name="payment_button_title">Payment Button</string>
+    <string name="custom_ui_title">Start Payment</string>
+    <string name="checkout_immediately_with">Checkout immediately with</string>
+    <string name="sdk_version_number">mobile sdk v%s</string>
+    <string name="visa">VISA</string>
+
+    <string name="card_holder_hint">Card Holder</string>
+    <string name="card_number_hint">Card Number</string>
+    <string name="card_expiry_month_hint">MM</string>
+    <string name="card_expiry_year_hint">YY</string>
+    <string name="card_cvv_hint">CVV</string>
+
+    <string name="date_delimiter">/</string>
+
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_proceed_to_checkout">PROCEED TO CHECKOUT</string>
+    <string name="button_pay_now">PAY NOW</string>
+
+    <string name="message_successful_payment">The payment was successful</string>
+    <string name="message_unsuccessful_payment">"The payment was unsuccessful"</string>
+    <string name="message_payment_confirmation">Payment of %1$s %2$s will be executed</string>
+
+    <string name="progress_message_please_wait">Please wait…</string>
+    <string name="progress_message_checkout_id">Getting the checkout id…</string>
+    <string name="progress_message_checkout_info">Getting the checkout info…</string>
+    <string name="progress_message_payment_status">Getting the payment status…</string>
+    <string name="progress_message_processing_payment">Processing payment…</string>
+
+    <string name="error_message">An error occurred</string>
+    <string name="error_empty_fields">The fields must not be empty</string>
+    <string name="are_you_sure">Are you Sure?</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="please_verify_friends_mobile_number">Please verify your friends mobile number</string>
+    <string name="please_select_date">Please Select Date</string>
+    <string name="please_enter_description">Please Enter Description</string>
+    <string name="Enter_message_title">Enter Message Title</string>
+    <string name="Enter_messgae_description">Enter Message Description</string>
+    <string name="are_you_sure_to_remove_favourites">Are you sure you want to remove from Favourites?</string>
+    <string name="remove">Remove</string>
+    <string name="New_cancel">Cancel</string>
+    <string name="no_card_added_yet">No Card is Added yet</string>
+    <string name="voucher_already_replaced_you_cant_replaced">Voucher Already been replaced,you can\'t replace it again</string>
+    <string name="you_will_recieve_this_amount_in_your_wallet_by_returning_this_voucher">You will recieve this amount in your Wallet by returning this Voucher</string>
+    <string name="please_add_item_to_cart">Please add item to the cart</string>
+    <string name="please_enter_old_password">Please Enter Old Password</string>
+    <string name="please_enter_new_password">Please Enter New Password</string>
+    <string name="iPay">Pay</string>
+    <string name="and_get">SAR and get</string>
+    <string name="PasswordsNotMatch">The passwords not matched</string>
+    <string name="SuccessfullySetNewPassword">Successfully set your new passwords, please login again</string>
+    <string name="offers">Offers</string>
+    <string name="gift_details">Details</string>
+    <string name="our_location_on_map">Our location on map</string>
+
+    <!--Delivery services-->
+    <string name="delivery_main_title">Yakrm Delivery</string>
+    <string name="welcome_to_yakrm_delivery_service">Welcome to Yakrm Delivery Service</string>
+    <string name="delivery_service">Delivery Service</string>
+    <string name="delivery_service_description">we are providing delivery product Delivery servic from Shops</string>
+    <string name="delivery">Delivery</string>
+    <string name="discount_voucher">Discount Voucher</string>
+    <string name="voucher_service_description">Check For Discount voucher and get more discount on shoping</string>
+    <string name="vouchers">Vouchers</string>
+    <string name="enter_product_name">Enter Product Name</string>
+    <string name="qty">Qty</string>
+    <string name="add">Add</string>
+    <string name="product">Product</string>
+    <string name="product_name">Product Name</string>
+    <string name="quantity">Quantity</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="change_address">Change Address</string>
+    <string name="shop_address">Shop Address (Not mendetory)</string>
+    <string name="select_store">Select Store</string>
+    <string name="place_order">Place Order</string>
+
+    <string name="order_id">Order Id</string>
+    <string name="view_detail">View Detail</string>
+    <string name="pending">Pending</string>
+    <string name="accept">Accept</string>
+    <string name="confirm">Confirm</string>
+    <string name="delivered">Delivered</string>
+    <string name="order_detail">Order Detail</string>
+    <string name="payment_amount">Payment Amount</string>
+    <string name="product_cost">Product cost :</string>
+    <string name="service_tax">Service Tax :</string>
+    <string name="delivery_charge">Delivery Charge :</string>
+    <string name="deliveryboy_name">Name</string>
+    <string name="contact">Contact</string>
+    <string name="payment">Payment</string>
+    <string name="select_what_you_want">Select What you want</string>
+    <string name="driver_detail">Driver Detail</string>
+    <string name="additional_notes">Additional Notes</string>
+    <string name="accept_order">Accept Order</string>
+
+    <string-array name="tab">
+        <item>New</item>
+        <item>Accepted</item>
+        <item>Delivered</item>
+    </string-array>
+
+</resources>

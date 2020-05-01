@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EE4158</color>
+    <color name="colorPrimaryDark">#D63A4F</color>
+    <color name="colorAccent">#59C2DA</color>
+
+    <color name="actionbar_opacity">#33000000</color>
+    <color name="gray">#BEAFAF</color>
+
+
+    <color name="button_color">#59C2DA</color>
+    <color name="dark_button_color">#59b1da</color>
+    <color name="black">#000</color>
+    <color name="text_color">#afafaf</color>
+    <color name="layout">#4bc5c5c5</color>
+    <color name="toast_color">#aa4dbc5c</color>
+    <color name="yellow">#aaccbb3f</color>
+
+    <color name="digit_color">#4dbc5c</color>
+    <color name="digit_color2">#e243ea</color>
+    <color name="digit_color3">#ffa229</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent_red">#64ee4158</color>
+    <color name="icon_color">#b1b0b0</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_light_intro">#C5C5C5</color>
+
+    <!-- dots active colors -->
+    <color name="dot_dark_intro">#EE4158</color>
+    <color name="white">#fff</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_light_intro1">#C5C5C5</color>
+    <color name="dot_light_intro2">#C5C5C5</color>
+    <color name="dot_light_intro3">#C5C5C5</color>
+    <color name="dot_light_intro4">#C5C5C5</color>
+    <color name="dot_light_intro5">#C5C5C5</color>
+    <color name="dot_light_intro6">#C5C5C5</color>
+
+    <!-- dots active colors -->
+    <color name="dot_dark_intro1">#EE4158</color>
+    <color name="dot_dark_intro2">#EE4158</color>
+    <color name="dot_dark_intro3">#EE4158</color>
+    <color name="dot_dark_intro4">#EE4158</color>
+    <color name="dot_dark_intro5">#EE4158</color>
+    <color name="dot_dark_intro6">#EE4158</color>
+
+
+    <array name="array_dot_active">
+        <item>@color/dot_dark_intro1</item>
+        <item>@color/dot_dark_intro2</item>
+        <item>@color/dot_dark_intro3</item>
+        <item>@color/dot_dark_intro4</item>
+        <item>@color/dot_dark_intro5</item>
+        <item>@color/dot_dark_intro6</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_light_intro1</item>
+        <item>@color/dot_light_intro2</item>
+        <item>@color/dot_light_intro3</item>
+        <item>@color/dot_light_intro4</item>
+        <item>@color/dot_light_intro5</item>
+        <item>@color/dot_light_intro6</item>
+    </array>
+
+    <color name="default_background_color">#555555</color>
+    <color name="default_text_color">#ffffff</color>
+
+    <color name="leku_mid_grey">#9199A1</color>
+    <color name="leku_strong_grey">#50545A</color>
+
+</resources>

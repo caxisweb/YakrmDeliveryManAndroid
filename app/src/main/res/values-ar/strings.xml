@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Yakrm</string>
+    <string name="title_activity_main">الأساسية</string>
+    <string name="startadventure">ابدأ المغامرة</string>
+    <string name="Signup">سجل</string>
+    <string name="skip_i_tnow">تخطي الأن </string>
+    <string name="buying_gift_cards">شراء كروت الهدايا </string>
+    <string name="buying_gift_cards_with_competitive_prices">اشتري كروت الهدايا بأسعار وخصومات مميزة ومن ماركات عالمية </string>
+    <string name="new_account">حساب جديد</string>
+    <string name="step_1_verify_your_mobile">خطوة ١: التحقق من رقم الجوال</string>
+    <string name="step_1_verify_your_mobile_number">خطوة ٢: التحقق من رقم الجوال </string>
+    <string name="Choose_the_country">اختر الدولة :</string>
+    <string name="Can_you_enter_your_mobile_number_please">من فضلك أدخل رقم الجوال الخاص بك </string>
+    <string name="When_you_register_a_new_account_you_are_accepting_usage_agreement_and_the_application_privacy_policy">بتسجيلك حساب جديد تكون موافق على اتفاقية الإستخدام وكذلك سياسة الإستخدام الخاصة بالتطبيق </string>
+    <string name="Usage_Agreememnt">موافق على اتفاقية</string>
+    <string name="privacy_policy">سياسة الإستخدام</string>
+    <string name="Send">ارسال </string>
+    <string name="If_you_have_already_an_account_long_in">لديك حساب بالفعل؟  تسجيل الدخول</string>
+    <string name="log_in"> تسجيل الدخول</string>
+    <string name="Enter_the_secret_code_which_is_sent_to_you">أدخل الكود السري المرسل إليك </string>
+    <string name="Verify">تحقق </string>
+    <string name="You_do_not_own_this_mobile_change_the_number">لا تملك هذا الجوال؟تغيير رقم الجوال </string>
+    <string name="change_the_number">تغيير رقم الجوال</string>
+    <string name="Step_2_Complete_your_personal_data">خطوة ١: إكمال البيانات الشخصية </string>
+    <string name="name">الإسم </string>
+    <string name="enter_your_full_name_please">أدخل الإسم كاملا من فضلك </string>
+    <string name="email">البريد الإلكتروني </string>
+    <string name="password">كلمة المرور </string>
+    <string name="Save">حفظ</string>
+    <string name="Sign_up_a_new_account">تسجيل حساب جديد </string>
+    <string name="Step_1_Enter_your_login_data">أدخل بيانات الدخول</string>
+    <string name="email_address">البريد الإلكتروني </string>
+    <string name="SR_currency">ريال</string>
+
+    <string name="Log_in">تسجيل الدخول</string>
+    <string name="Do_not_have_an_account">ليس لديك حساب ؟</string>
+    <string name="Forget_password">نسيت كلمة المرور ؟</string>
+    <string name="Step_2_verifying_mobile_number">خطوة 2: التحقق من رقم الجوال </string>
+    <string name="Return">رجوع </string>
+    <string name="Personal_data">البيانات الشخصية</string>
+    <string name="AhmedSaidAbdelRahman">أحمد سعيد عبد الرحمن </string>
+    <string name="Country">الدولة </string>
+    <string name="Saudi_Arabia">السعودية </string>
+    <string name="Mobile_number">رقم الجوال </string>
+    <string name="Modify_data">تعديل البيانات </string>
+
+    <string name="Buy">شراء</string>
+    <string name="Received">مستلمة</string>
+    <string name="Replace">استبدال</string>
+    <string name="Auction">مزاد</string>
+    <string name="My_Wallet">محفظتي</string>
+
+
+    <string name="filter_the_results">بحث متقدم</string>
+    <string name="The_most_popular_gifts">الهدايا الأكثر شعبية </string>
+    <string name="brand_address_is_here_discount_till_4">عنوان البراند هنا، توفير حتى 4%</string>
+
+
+    <string name="Filter_search_results">تصفية نتائج البحث</string>
+    <string name="Gifts_classification">تصنيف الهدايا </string>
+    <string name="Cuisine">مأكولات </string>
+    <string name="books_and_magazines">كتب ومجلات </string>
+    <string name="coffee">قهوة </string>
+    <string name="Stores_and_groceries">متاجر وتموينات </string>
+    <string name="children_toys">ألعاب أطفال </string>
+    <string name="fashion_and_uniforms">موضة وأزياء </string>
+    <string name="Care_and_makeup_centers">مراكز تجميل وعناية </string>
+    <string name="Hotels_and_tourism">فنادق وسياحة </string>
+    <string name="Sport_clothes">ملابس رياضية </string>
+    <string name="phones_and_electronics">هواتف وإلكترونيات </string>
+    <string name="sport_tools">أدوات رياضية </string>
+    <string name="Clothes">ملابس</string>
+    <string name="jewelries_and_golden">مجوهرات وذهب </string>
+    <string name="others">أخرى </string>
+
+
+    <string name="Gift_type">نوع الهدايا </string>
+    <string name="Electronic_gift">قسائم الكترونية </string>
+    <string name="Paper_gift">قسائم ورقية </string>
+
+
+    <string name="Gift_order">ترتيب الهدايا </string>
+    <string name="Most_popular">الأكثر شعبية </string>
+    <string name="High_discounted">الأكثر خصما </string>
+    <string name="Brand_names">اسم البراند </string>
+    <string name="Filter">تصفية </string>
+    <string name="Delete">مسح </string>
+
+
+    <string name="Gift_details">تفاصيل الهدية </string>
+    <string name="Saudi_Arabic_airlines">الخطوط العربية السعودية </string>
+    <string name="Electronic_and_paper_gifts">هدايا إلكترونية وورقية </string>
+    <string name="Information_about_the_gift_giver">معلومات عن مقدم الهدية </string>
+
+
+    <string name="Value">القيمة </string>
+    <string name="discount">توفير </string>
+    <string name="pay">ادفع </string>
+    <string name="Added_to_the_buying_basket_successfully">تمت الإضافة لسلة الشراء بنجاح</string>
+
+    <string name="Zero_SR">0 ريال</string>
+    <string name="SR">مائة ريال </string>
+    <string name="SR2">200 ريال</string>
+    <string name="SR3">250 ريال</string>
+    <string name="SR4">486 ريال</string>
+    <string name="S5">5%</string>
+    <string name="Compete_the_purchase">إتمام الشراء </string>
+
+    <string name="Research">بحث </string>
+    <string name="Enter_the_brand_name"> ادخل اسم العلامة التجارية </string>
+
+
+    <string name="Sharing">مشاركة </string>
+    <string name="Favorites">الفضلة </string>
+    <string name="Cart_empty">السلة (فارغة)</string>
+    <string name="Cart">السلة</string>
+    <string name="The_basket_is_empty">السلة (فارغة)</string>
+    <string name="There_is_no_Purchases_in_the_buying_basket">لا يوجد مشتريات في سلة الشراء </string>
+    <string name="Start_Purchasing">إبدأ الشراء </string>
+
+
+    <string name="four_elements_the_basket">السلة (4 عناصر)</string>
+    <string name="STABUCKSCARD_electronic_and_paper_gifts">STABUCKSCARD  (electronic and paper gifts)</string>
+    <string name="Ended_in_12_12_2018">Ended in 12/12/2018</string>
+    <string name="The_value">القيمة :</string>
+    <string name="sr"> 2500 ريال </string>
+    <string name="Discount">الخصم:</string>
+    <string name="The_price">السعر :</string>
+    <string name="s_r">2420 ريال </string>
+    <string name="pay_now">دفع الأن </string>
+    <string name="Total">المجموع </string>
+    <string name="new_sr"> 8150 ريال </string>
+
+
+    <string name="Completing_Purchasing">اتمام الشراء </string>
+    <string name="Your_Amount">رصيدك </string>
+    <string name="amount_sr"> 155 ر.س</string>
+    <string name="Total_Amount">المبلغ الإجمالي هو </string>
+    <string name="Sr">ريال </string>
+    <string name="The_Amount_Will_Be_Deduced_From_Your_Current_Account">سيتم خصم المبلغ من رصيدك الحالي </string>
+    <string name="Completing_Payment">إتمام الدفع </string>
+    <string name="The_Process_Is_Carried_Out_Successfully">تمت العملية بنجاح</string>
+    <string name="Something_Wrong_Occur_AndProcess_Is_Not_Finished_Yet">حدث خطأ ما ولم تتم العملية </string>
+    <string name="Your_Current_Amount_Is_Not_Enough_To_Carry_Out_Purchasing_Process">رصيدك الحالي غير كافي لإتمام عملية الشراء </string>
+    <string name="Charge_Your_Account_Balance">شحن رصيد لحسابك </string>
+    <string name="By_Using_Pay_Pal">By Using Pay Pal</string>
+    <string name="By_Using_Mada_Card">عن طريق بطاقة مدي</string>
+    <string name="By_Using_Visa_Card">عن طريق بطاقة ائتمان</string>
+    <string name="digits">**** **** **** 5678</string>
+    <string name="By_Using_Credit_Card">بواسطة بطاقة الدفع</string>
+    <string name="Sent_By_Your_Friend_Mahmoud_Abd_El_Rahman">مرسلة من صديقك </string>
+    <string name="Hello_Friend_I_Am_SendingThis_Voucher_To_Express_My_Love">هلا حبيبي، بأرسلك هذه الهدية لأعبر عن اعتزازي بك كصديق عزيز</string>
+    <string name="I_Hope_That_You_Will_Be_Happy_During_Every">وتمني لك السعادة والتميز في حياتك كلها </string>
+    <string name="Attached_Video">بيانات صديقك</string>
+    <string name="Press_To_Watch">اضغط للمشاهدة </string>
+
+
+    <string name="Upload_Voucher">رفع قسيمة </string>
+    <string name="Your_current_balance">رصيدك الحالي</string>
+    <string name="Discount_vouchers">القسائم النشطة</string>
+    <string name="Active">النشطة</string>
+    <string name="Vendors_of_vouchers">القسائم المفضلة</string>
+    <string name="Favorite">المفضلين</string>
+    <string name="Vouchers_ended">قسائم انتهت</string>
+    <string name="Already_valid">بالفعل صلاحيتها</string>
+    <string name="Vouchers_That_Have_Already_Ended"> قسائم بالفعل انتهت تاريخ صلاحيتها </string>
+    <string name="Done">تم</string>
+    <string name="Active_coupons">القسائم النشطة</string>
+    <string name="Sr_Stabuckscard"> 25 ر.س</string>
+    <string name="Voucher_Number">1 قسيمة خصم </string>
+    <string name="Active_Till">صالحة حتي </string>
+
+
+    <string name="replace_voucher">استبدل القسيمة</string>
+    <string name="Voucher_Till">صالحة حتى </string>
+    <string name="New_Sr">25 ر.س</string>
+    <string name="Voucher_number">رقم القسيمة:</string>
+    <string name="Pin_Number">رقم pin : </string>
+    <string name="General_Instructions">تعليمات عامة </string>
+    <string name="Here_You_Find_Vouchers_For_Discount_Send_By_Your_Friends">هنا تجد قسائم الخصم المرسلة من أصدقائك </string>
+    <string name="You_Can_Transform_It_Into_Voucher_Cards">ويمكنك نقلها إلى محفظة الكروت واستغلالها في الشراء والخصومات</string>
+    <string name="Discount_Voucher"> قسيمة خصم </string>
+    <string name="Upload_Vouchers_Choose_The_Brand">رفع قسيمة خصم- اختر البراند</string>
+
+
+    <string name="Upload_Voucher_Voucher_Data">رفع قسيمة خصم- بيانات القسيمة </string>
+    <string name="Scan_The_Card_To_Bring_The_Data_Automatically">قم بعمل ماسح ضوئي للبطاقة لجلب بيانات البطاقة تلقائيا </string>
+    <string name="Scan_The_Photo">مسح  </string>
+    <string name="Enter_Data_Manually_In_Case_Scanning_Is_Failed">إدخال البيانات يدويا في حالة فشل المسح الضوئي </string>
+    <string name="Voucher_Value">قيمة القسيمة : </string>
+    <string name="Available_Till">صالح حتى: </string>
+    <string name="January">صالح حتى </string>
+    <string name="Adding_To_My_Notecase">إضافة إلى محفظتي </string>
+
+    <string name="Exchange_A_Discount_Voucher">استبدال قسيمة خصم </string>
+    <string name="Return_Voucher">قسيمة العودة </string>
+    <string name="Send_For_A_Friend_As_A_Gift">ارسال إلى صديق كهدية </string>
+    <string name="Exchange_And_Add_The_Amount_On_Your_Balance">استبدال وإضافة المبلغ إلى رصيدك</string>
+    <string name="Display_The_Voucher_On_An_Auction">عرض القسيمة إلى المزاد </string>
+    <string name="Return_Voucher_Add_The_Amount_On_Your_Balance">عودة قسيمة إضافة المبلغ على رصيدك</string>
+
+    <string name="Send_to_a_friend">إرسال لصديق</string>
+    <string name="Friend_mobile_number">أدخل رقم جوال صديقك </string>
+    <string name="Friend_information">ارفاق فيديو</string>
+    <string name="Name">الإسم:  </string>
+    <string name="Mahmoud_Abd_El_Mot_al"> محمود عبد المتعال </string>
+    <string name="Email_Address">البريد الإلكتروني :</string>
+    <string name="Sending_Date">تاريخ الإرسال </string>
+    <string name="Hello_Friend_I_Am_Sending_You_This_Voucher_To_Express_My_Love_And_Gratitude">هلا حبيبي، بأرسلك هذه الهدية لأعبر عن مدى اعتزازي بك كصديق عزيز</string>
+    <string name="I_Hope_That_You_Will_Be_Happy">وأنتمى لك السعادة والتميز في حياتك كلها. </string>
+    <string name="Completing_The_Sending_Process">اتمام الإرسال </string>
+
+
+    <string name="Exchanging_And_add_to_my_balance">استبدال وإضافة المبلغ إلى رصيدك</string>
+    <string name="How_Much_You_Will_Exchange_The_Amount">بكم تستبدل القيمة؟</string>
+    <string name="You_Will_Get_The_Amount_Of">ستحصل على مبلغ </string>
+    <string name="SR_only"> 8.5 ر.س فقط </string>
+    <string name="Completing_Exchange_Process">اتمام الإستبدال </string>
+
+    <string name="Main_Page">الرئيسية </string>
+    <string name="My_Personal_Account">حسابي الشخصي </string>
+    <string name="Active_Vouchers">القسائم النشطة </string>
+    <string name="Favorite_Vouchers">القسائم المفضلة </string>
+    <string name="Best_Brands">البائعين المفضلين  </string>
+    <string name="Transactions_Record">سجل العمليات </string>
+    <string name="Auctions">المزادات </string>
+    <string name="Payment_Methods">طرق الدفع </string>
+    <string name="Support_And_Contact">الدعم والتواصل </string>
+    <string name="About_The_Application">عن التطبيق </string>
+    <string name="Instructions_And_Conditions">التعليمات والشروط </string>
+    <string name="Sign_Out">تسجيل الخروج </string>
+    <string name="English_Version">English Version</string>
+    <string name="Share_With_Your_Friends">شارك التطبيق مع اصدقائك</string>
+
+
+    <string name="Favorite_Brands_Of_Vouchers">بائعي القسائم المفضلين </string>
+
+    <string name="Vouchers_Will_end_Very_Soon">قسائم قرب إنتهاءها </string>
+    <string name="Available_till_date">صالحة حتى 13/13/2018</string>
+    <string name="For_The_Coming_Days_Only">(For The Coming 2 Days Only)</string>
+    <string name="Vouchers_That_Have_Ended">قسائم قرب انتهائها </string>
+
+    <string name="Notifications">الإشعارات </string>
+    <string name="New">جديد</string>
+    <string name="System_Administrator">مدير النظام: عزيزنرجو منك تعبئة البيانات الشخصية الخاصة بك لإتمام التسجيل</string>
+    <string name="Minutes_ago">8 Minutes ago</string>
+    <string name="Yesterday">يوم أمس </string>
+    <string name="Dec_18">10/ديسمبر /2018</string>
+
+    <string name="Financial_Transactions_Record">سجل العمليات المالية </string>
+
+    <string name="Contact_And_Support">التواصل والدعم </string>
+    <string name="Any_Questions_Ideas_Or_Evaluations">هل لديك أسئلة أو أفكار أو تقييم؟</string>
+    <string name="Contact_With_And_Send_To_Us">تواصل معنا وأرسل لنا </string>
+    <string name="Message_Title">موضوع الرسالة </string>
+    <string name="Message_Details">تفاصيل الرسالة</string>
+
+    <string name="Exchange_Instructions">تعليمات الإستبدال </string>
+    <string name="Received_Vouchers">هنا تجد كروت الهدايا المرسلة من أصدقائك </string>
+    <string name="You_Can_Transform_It_Ito_Walet_Cards_And_Use_It_In_purchasing_And_Discount_Process">ويمكنك نقلها إلى محفظة الكروت واستغلالها في الشراء والخصومات</string>
+    <string name="Auctions_Instructions">تعليمات المزادات </string>
+    <string name="Here_You_Find_Voucher_Cards_Friend">هنا تجد كروت الهدايا المرسلة من أصدقائك </string>
+    <string name="Other_Instructions">تعليمات أخرى </string>
+
+    <string name="About_Yakrm">عن التطبيق </string>
+    <string name="Idea_of_Yakrm">فكرة التطبيق </string>
+    <string name="Version_Number">رقم الإصدار: 1.0.0</string>
+
+    <string name="Auctions_Of_Other">مزادات الأخرين </string>
+    <string name="Auction_On_My_Vouchers">مزاد على قسائمي </string>
+    <string name="Active_Now">جارية الأن </string>
+    <string name="Win">فازت بها </string>
+    <string name="Lost">خسرتها </string>
+    <string name="Valid_Till"> صالحة حتى 13/12/2018</string>
+    <string name="SR_discount_voucher">قسيمة خصم بقيمة 25 ر.س- المالك: محمود عبدالله  </string>
+
+    <string name="Introduce_Your_Auction_With_Value">Introduce Your Auction With Value:</string>
+    <string name="Auction_With_Value">مزايدة بقيمة 30 ر.س</string>
+    <string name="Auction_Number">عدد المزايدات: 18</string>
+    <string name="Remaining">المتبقي: 15س: 25 د</string>
+    <string name="Abed_El_Rahman_Fawzi_Wins_The_Auction">فاز بالمزاد عبدالرحمن فوزي بقيمة 75 ر.س </string>
+    <string name="Your_Auction_Value">Your Auction\'s Value Was 65 SR</string>
+
+    <string name="View_Auction_Voucher">عرض قسيمة المزاد </string>
+    <string name="Your_Voucher_Will_Be_Uploaded_For_Auction_Other_Will_Compete_To_Win_It">Your Voucher Will Be Uploaded For Auction. Other Will Compete To Win It</string>
+    <string name="Auction_Duration">مدة المزاد هي 3 أيام كاملة </string>
+    <string name="The_Lowest_Value_for_Increase_Is">أقل قيمة للزيادة هي 5 ريال </string>
+    <string name="Terms_and_Condition">شروط وقواعد المزادات كاملة  ></string>
+    <string name="Accept">موافق </string>
+
+    <string name="Last_Auction">Last Auction: 25 SR</string>
+
+    <string name="Ended">منتهية في</string>
+    <string name="The_Number_Of_The_Auctions">عدد المزايدات: 18</string>
+    <string name="Abed_El_Rahman_Fawzi_Wins_The_Auction_The_Value_Is">فاز بالمزاد عبدالرحمن فوزي بقيمة 75 ر.س </string>
+    <string name="User_Agreement_And_Privacy_Policy">اتفاقية الإستخدام وسياسة الخصوصية </string>
+    <string name="User_Agreement">اتفاقية المستخدم</string>
+    <string name="Privacy_Policy">سياسة خاصة</string>
+    <string name="discount_till">خصم ل</string>
+    <string name="Endingon">تنتهي في</string>
+
+
+    <string name="_0_sr">٠ ريال</string>
+
+    <string name="Payment_method">قائمة البطاقات</string>
+    <string name="there_is_no_any_payment_method_added_in_your_account">لا يوجد طرق للدفع مسجلة لديك </string>
+    <string name="Adding_A_Payment_Method">إضافة طريقة دفع </string>
+    <string name="Card_Holder_Name">اسم صاحب البطاقة </string>
+    <string name="Card_Number">رقم البطاقة </string>
+    <string name="Security_Number">رقم الحماية </string>
+    <string name="Expiry_Date">تاريخ الإنتهاء </string>
+    <string name="Add">إضافة </string>
+
+
+    <string name="Current_payment_methods">طرق الدفع الحالية</string>
+    <string name="Add_Another_Method">إضافة طريقة أخرى </string>
+    <string name="Change_password">غير كلمة السر</string>
+    <string name="Enter_Old_password">من فضلك ادخل كلمة المرور القديمة</string>
+    <string name="Enter_New_password">من فضلك ادخل كلمة المرور الجديدة </string>
+
+
+    <string name="one">١</string>
+    <string name="two">٢</string>
+    <string name="three">٣</string>
+    <string name="four">٤</string>
+    <string name="five">٥</string>
+    <string name="six">٦</string>
+    <string name="seven">٧</string>
+    <string name="eight">٨</string>
+    <string name="nine">٩</string>
+    <string name="zero">٠</string>
+    <string name="CVV">CVV</string>
+    <string name="wallet_amount_is_0_and_ammount_to_be_paid_is"> مبلغ المحفظة هو 0 والمبلغ الواجب دفعه هو :</string>
+    <string name="by_visa">بواسطة الفيزا:</string>
+    <string name="by_wallet">بواسطة محفظة:</string>
+    <string name="confirm_new_password">تأكيد كلمة المرور الجديدة</string>
+
+    <string name="Confirm_new_password">تأكيد كلمة المرور الجديدة</string>
+
+    <string name="Please_Enter_Email">من فضلك ادخل بريد الكتروني </string>
+    <string name="Please_Enter_Password">من فضلك ادخل كلمة المرور </string>
+    <string name="Server_Error">Server Error</string>
+    <string name="Please_Wait">انتظر قليلا</string>
+    <string name="Please_Enter_Mobile_Number">من فضلك أدخل رقم الهاتف</string>
+    <string name="Mobile_Number_should_be_minimum">رقم الهاتف يجب ان لا يقل عن 10 ارقام </string>
+    <string name="Please_Enter_OTP">من فضلك ادخل كود التحقق</string>
+    <string name="Please_Enter_Name">من فضلك ادخل الاسم </string>
+    <string name="Name_should_be_minimum_of_three_characters">الاسم لايجب ان يقل عن 3 احرف </string>
+    <string name="Please_Enter_Valid_Email">من فضلك ادخل بريد الكتروني صحيح</string>
+    <string name="Password_should_be_minimum_of_six_characters">كلمة المرور  يجب ان لا تقل عن 6 احرف </string>
+    <string name="Please_Select_atleast_one_filter_category_from_above">يرجي اختيار علي الاقل فئة واحدة </string>
+    <string name="No_Internet_Connection">تحقق من الاتصال بالانترنت </string>
+    <string name="Take_Photo">التقط صورة</string>
+    <string name="Choose_from_Gallery">اختار صورة من معرض الصور </string>
+    <string name="Cancel"> الغاء</string>
+    <string name="Add_Photo">أضف صورة </string>
+
+    <string name="PleaseEnterCardHolderName">من فضلك ادخل اسم صاحب البطاقة</string>
+    <string name="PleaseEnterValidName">الرجاء إدخال اسم صالح</string>
+    <string name="PleaseEnterCardNumber">من فضلك ادخل رقم البطاقة</string>
+    <string name="PleaseEnterCorrectCardNo">من فضلك أدخل رقم بطاقة صحيح</string>
+    <string name="PleaseEnterCardExpirydate">من فضلك أدخل تاريخ الانتهاء </string>
+    <string name="PleaseEnterSecurityNumber">من فضلك أدخل الرقم السري </string>
+    <string name="PleaseEnterCorrectSecurityNumber">من فضلك ادخل رقم سري صحيح</string>
+    <string name="AreYouSureToLogout">هل انت متأكد من تسجيل  الخروج ؟</string>
+    <string name="yes">نعم فعلا</string>
+    <string name="no">لا</string>
+    <string name="VoucherScannedSuccessfully">تم مسح القسيمة بنجاح</string>
+    <string name="EnterVoucherNumber">من فضلك ادخل رقم القسيمة </string>
+
+    <string name="recordvideofromcamera">تسجيل الفيديو من الكاميرا</string>
+    <string name="selectvideofromgallery">اختر الفيديو من المعرض</string>
+    <string name="addvideo">أضف فيديو!</string>
+    <string name="pleasecheckexpirydate">يرجى التحقق من تاريخ انتهاء الصلاحية</string>
+    <string name="pleaseentervalidcardnumber">الرجاء إدخال رقم البطاقة ساري المفعول</string>
+    <string name="youcannotsendgifted">لا يمكنك إرسال قسيمة الموهوبين إلى صديق.</string>
+    <string name="PleaseEnterValidCardNo">الرجاء إدخال رقم البطاقة ساري المفعول</string>
+    <string name="resend">اعادة ارسال</string>
+    <string name="You_have_few_items_in_the_cart_to_purchase">لديك منتج في السلة</string>
+    <string name="Purchase_Voucher">شراء قسيمة</string>
+    <string name="Mobile_number_should_start_with_05">يجب أن يبدأ رقم الجوال بـ 05</string>
+    <string name="More">...أكثر من</string>
+    <string name="Less">...أقل</string>
+
+    <string name="Debited">تم الخصم</string>
+    <string name="Credited">تم السحب</string>
+    <string name="ReturnedVoucher">قسيمة الإرجاع</string>
+    <string name="PurchasedVoucher">شراء قسيمة</string>
+    <string name="ReplacedVoucher">استبدال قسيمة</string>
+    <string name="GiftedVoucher">قسيمة الموهوبين</string>
+    <string name="no_internet_connection">تحقق من الاتصال بالانترنت </string>
+    <string name="are_you_sure">هل أنت متأكد ؟</string>
+    <string name="please_verify_friends_mobile_number">من فضلك تحقق من رقم صديقك </string>
+    <string name="please_select_date">من فضلك اخنار التاريخ </string>
+    <string name="please_enter_description">Please Enter Description</string>
+    <string name="Enter_message_title">من فضلك ادخل عنوان الرسالة </string>
+    <string name="Enter_messgae_description">من فضلك ادخل  تفاصيل الرسالة</string>
+    <string name="are_you_sure_to_remove_favourites">هل أنت متأكد من ازالة القسيمة من المفضلة؟</string>
+    <string name="remove">ازالة</string>
+    <string name="New_cancel">الغاء</string>
+    <string name="no_card_added_yet">لم يتم اضافة بطاقات حتي الان</string>
+    <string name="voucher_already_replaced_you_cant_replaced">هذه القسيمة تم استبدالها من قبل, لا يمكنك استبدالها مرة اخرى</string>
+    <string name="you_will_recieve_this_amount_in_your_wallet_by_returning_this_voucher">تتلقي هذا المبلغ في محفظتك عن طريق اعادة هذه القسيمة</string>
+    <string name="please_add_item_to_cart">من فضلك أضف العنصر للسلة </string>
+    <string name="please_enter_old_password">من فضلك ادخل كلمة المرور القديمة</string>
+    <string name="please_enter_new_password">من فضلك ادخل كلمة المرور الجديدة </string>
+    <string-array name="selectcountry">
+        <item>السعودية </item>
+    </string-array>
+
+    <string name="iPay">أدفع</string>
+    <string name="and_get"> ريال و احصل على</string>
+    <string name="PasswordsNotMatch">كلمة السر ليست متطابقة </string>
+    <string name="SuccessfullySetNewPassword">لقد تم تغير كلمة السر بنجاح من فضلك حاول الدخول مرة اخري </string>
+    <string name="offers">العروض</string>
+    <string name="gift_details">تفاصيل</string>
+    <string name="our_location_on_map">موقعنا على الخريطة</string>
+
+    <!--Delivery service-->
+    <string name="welcome_to_yakrm_delivery_service">أهلا بك في تطبيق يكرم للتوصيل </string>
+    <string name="delivery_service">خدمة التوصيل</string>
+    <string name="delivery_service_description">نوفر لك خدمة التوصيل لأي طلب من أي مكان اذا تبي تطلب من (سوبرماركت أو مطعم أو صيدلية او توصل طلب من مكان لمكان) خلك في البيت مرتاح واحنا نجيك</string>
+    <string name="delivery">توصيل</string>
+    <string name="discount_voucher">قسائم الخصومات</string>
+    <string name="voucher_service_description">احصل على قسائم الخصومات لتحصل على الكثير من التخفيضات أثناء التسوق</string>
+    <string name="vouchers">قسائم الخصومات</string>
+    <string name="enter_product_name">ادخل اسم المنتج و تفاصيله</string>
+    <string name="qty">الكمية</string>
+    <string name="add">إضافة</string>
+    <string name="product">المنتج</string>
+    <string name="product_name">اسم المنتج</string>
+    <string name="quantity">الكمية</string>
+    <string name="delivery_address">عنوان التوصيل</string>
+    <string name="change_address">تغير العنوان</string>
+    <string name="shop_address">عنوان المحل</string>
+    <string name="select_store">اختر المتجر</string>
+    <string name="place_order">مكان الطلب</string>
+
+    <string name="order_id">رقم الطلب</string>
+    <string name="view_detail">عرض التفاصيل</string>
+    <string name="pending">في الإنتظار</string>
+    <string name="accept">قبول</string>
+    <string name="confirm">تأكيد</string>
+    <string name="delivered">تم التوصيل</string>
+    <string name="order_detail">تفاصيل الطلب</string>
+    <string name="payment_amount">قيمة الطلب</string>
+    <string name="product_cost">قيمة المنتج :</string>
+    <string name="service_tax">ضريبة الخدمة :</string>
+    <string name="delivery_charge">قيمة التوصيل :</string>
+    <string name="deliveryboy_name">الاسم</string>
+    <string name="contact">وسائل الاتصال</string>
+    <string name="payment">الدفع</string>
+    <string name="select_what_you_want">اختر من القائمة</string>
+    <string name="driver_detail">تفاصيل مندوب التوصيل</string>
+    <string name="additional_notes">ملاحظات اضافية</string>
+    <string name="accept_order">Accept Order</string>
+
+    <string-array name="tab">
+        <item>اطلب الأن</item>
+        <item>طلباتي</item>
+    </string-array>
+
+</resources>

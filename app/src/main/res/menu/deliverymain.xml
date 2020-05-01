@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_notification"
+        android:orderInCategory="100"
+        android:title="search"
+        app:actionLayout="@layout/custom_notification_icon_layout"
+        app:showAsAction="always" />
+
+    <!--<item
+        android:id="@+id/action_basket"
+        android:orderInCategory="100"
+        android:title="search"
+        app:actionLayout="@layout/custom_basketicon_layout"
+        app:showAsAction="always" />-->
+
+    <item
+        android:id="@+id/action_user"
+        android:orderInCategory="100"
+        android:title="search"
+        app:actionLayout="@layout/custom_usericon_layout"
+        app:showAsAction="always" />
+
+
+</menu>
