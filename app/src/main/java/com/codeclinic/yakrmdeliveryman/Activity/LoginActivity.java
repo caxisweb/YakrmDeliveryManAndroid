@@ -18,7 +18,6 @@ import com.codeclinic.yakrmdeliveryman.R;
 import com.codeclinic.yakrmdeliveryman.Retrofit.API;
 import com.codeclinic.yakrmdeliveryman.Retrofit.RestClass;
 import com.codeclinic.yakrmdeliveryman.Utils.SessionManager;
-import com.google.firebase.iid.FirebaseInstanceId;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -135,17 +134,15 @@ public class LoginActivity extends AppCompatActivity {
 
                                 finish();
 
-                            } else if(response.body().getStatus().equals("2")){
+                            } else if (response.body().getStatus().equals("2")) {
 
-                                Intent i_otp=new Intent(LoginActivity.this, NewAccountActivity.class);
-                                i_otp.putExtra("token",response.body().getToken());
+                                Intent i_otp = new Intent(LoginActivity.this, NewAccountActivity.class);
+                                i_otp.putExtra("token", response.body().getToken());
                                 startActivity(i_otp);
                                 Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                                /*if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
+                            } else {
+                                Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
 
-                                } else {
-                                    Toast.makeText(LoginActivity.this, response.body().getArab_message(), Toast.LENGTH_SHORT).show();
-                                }*/
                             }
                         }
 
@@ -163,8 +160,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //startActivity(new Intent(LoginActivity.this, NewAccountActivity.class));
-                Intent i_otp=new Intent(LoginActivity.this, NewAccountActivity.class);
-                i_otp.putExtra("token","0");
+                Intent i_otp = new Intent(LoginActivity.this, NewAccountActivity.class);
+                i_otp.putExtra("token", "0");
                 startActivity(i_otp);
             }
         });
