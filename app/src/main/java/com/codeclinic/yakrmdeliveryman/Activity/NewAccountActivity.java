@@ -61,7 +61,7 @@ public class NewAccountActivity extends AppCompatActivity {
 
     String str_email_regex = "[a-zA-Z0-9._-]+@[a-z]+.[a-z]+";
 
-    String str_otp, str_user_token, str_number, str_edt_1, str_edt_2, str_edt_3, str_edt_4, str_name, str_email, str_password;
+    String str_otp, str_user_token="0", str_number, str_edt_1, str_edt_2, str_edt_3, str_edt_4, str_name, str_email, str_password;
 
     SessionManager sessionManager;
     String language;
@@ -80,8 +80,20 @@ public class NewAccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_account);
 
+        Bundle b=getIntent().getExtras();
+        str_user_token=b.getString("token");
+
         number_verify_cardview = findViewById(R.id.number_verify_cardview);
         personal_detail_cardview = findViewById(R.id.personal_detail_cardview);
+
+        if(str_user_token.equals("0")){
+            number_verify_cardview.setVisibility(View.GONE);
+            personal_detail_cardview.setVisibility(View.VISIBLE);
+        }else{
+            number_verify_cardview.setVisibility(View.VISIBLE);
+            personal_detail_cardview.setVisibility(View.GONE);
+        }
+
         tv_min = findViewById(R.id.tv_min);
 
         progressDialog = new ProgressDialog(NewAccountActivity.this);
@@ -278,7 +290,7 @@ public class NewAccountActivity extends AppCompatActivity {
 
                     try {
 
-                        jsonObject_verify.put("is_resend_otp", "false");
+                        jsonObject_verify.put("is_resend_otp", false);
                         jsonObject_verify.put("otp", temp_otp);
 
                     } catch (JSONException e) {
@@ -290,13 +302,13 @@ public class NewAccountActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<VerifyOTPModel> call, Response<VerifyOTPModel> response) {
                             progressDialog.dismiss();
-                            if (response.body().getStatus().equals("2")) {
+                            if (response.body().getStatus().equals("1")) {
                                 if (countDownTimer != null) {
                                     countDownTimer.cancel();
                                 }
 
-                                sessionManager.createLoginSession(response.body().getToken(), response.body().getId(), response.body().getName(), response.body().getEmail(), response.body().getMobileNo());//else salesmen
-                                startActivity(new Intent(NewAccountActivity.this, MainActivity.class));
+                                //sessionManager.createLoginSession(response.body().getToken(), response.body().getId(), response.body().getName(), response.body().getEmail(), response.body().getMobileNo());//else salesmen
+                                startActivity(new Intent(NewAccountActivity.this, LoginActivity.class));
                                 finish();
 
                                 Toast.makeText(NewAccountActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();

@@ -112,6 +112,7 @@ public class LoginActivity extends AppCompatActivity {
                     progressDialog.show();
 
                     try {
+
                         jsonObject.put("mobile_no", str_email);
                         jsonObject.put("password", str_password);
                         jsonObject.put("device_type", "1");
@@ -126,6 +127,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
                             progressDialog.dismiss();
+
                             if (response.body().getStatus().equals("1")) {
 
                                 sessionManager.createLoginSession(response.body().getToken(), response.body().getId(), response.body().getName(), response.body().getEmail(), response.body().getMobileNo());//else salesmen
@@ -133,7 +135,11 @@ public class LoginActivity extends AppCompatActivity {
 
                                 finish();
 
-                            } else {
+                            } else if(response.body().getStatus().equals("2")){
+
+                                Intent i_otp=new Intent(LoginActivity.this, NewAccountActivity.class);
+                                i_otp.putExtra("token",response.body().getToken());
+                                startActivity(i_otp);
                                 Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
                                 /*if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
 
@@ -156,7 +162,10 @@ public class LoginActivity extends AppCompatActivity {
         tv_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, NewAccountActivity.class));
+                //startActivity(new Intent(LoginActivity.this, NewAccountActivity.class));
+                Intent i_otp=new Intent(LoginActivity.this, NewAccountActivity.class);
+                i_otp.putExtra("token","0");
+                startActivity(i_otp);
             }
         });
     }

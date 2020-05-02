@@ -1,7 +1,15 @@
 package com.codeclinic.yakrmdeliveryman.Activity;
 
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -28,6 +36,8 @@ import com.codeclinic.yakrmdeliveryman.Utils.SessionManager;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     public static DrawerLayout drawer;
@@ -49,8 +59,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         sessionManager=new SessionManager(this);
-
-        Log.i("token",sessionManager.getUserDetails().get(SessionManager.User_Token));
 
         drawer = findViewById(R.id.drawer_layout);
         main_content = findViewById(R.id.main_content);
@@ -204,6 +212,89 @@ public class MainActivity extends AppCompatActivity {
         }
         LinearLayout llayout_english = header1.findViewById(R.id.llayout_english);
         final TextView tv_language_version = header1.findViewById(R.id.tv_language_version);
+
+        llayout_signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (sessionManager.isLoggedIn()) {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this, R.style.CustomDialogFragment);
+                    alert.setMessage(getResources().getString(R.string.AreYouSureToLogout));
+                    alert.setCancelable(false);
+                    alert.setPositiveButton(getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
+                        @SuppressLint("StaticFieldLeak")
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            drawer.closeDrawer(GravityCompat.START);
+                            if (findViewById(R.id.frame_contaner).getVisibility() == View.VISIBLE) {
+                                findViewById(R.id.frame_contaner).setVisibility(View.GONE);
+                                setTitle(getResources().getString(R.string.title_activity_main));
+                            }
+
+                            sessionManager.setReminderStatus(false);
+                            sessionManager.logoutUser();
+                            finish();
+                        }
+                    }).setNegativeButton(getResources().getString(R.string.no), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+                    AlertDialog alertDialog = alert.create();
+                    alertDialog.show();
+                } else {
+                    drawer.closeDrawer(GravityCompat.START);
+                    if (findViewById(R.id.frame_contaner).getVisibility() == View.VISIBLE) {
+                        findViewById(R.id.frame_contaner).setVisibility(View.GONE);
+                        setTitle(getResources().getString(R.string.title_activity_main));
+                    }
+
+                    sessionManager.logoutUser();
+                    finish();
+                }
+            }
+        });
+
+        llayout_english.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                drawer.closeDrawer(GravityCompat.START);
+
+                if (findViewById(R.id.frame_contaner).getVisibility() == View.VISIBLE) {
+                    findViewById(R.id.frame_contaner).setVisibility(View.GONE);
+                    setTitle(getResources().getString(R.string.delivery_main_title));
+                }
+
+                String language_name = "";
+                if (tv_language_version.getText().equals("النسخة العربية")) {
+                    language_name = "ar";
+                } else {
+                    language_name = "en";
+                }
+                sessionManager.putLanguage("Language", language_name);
+
+                Locale locale = new Locale(language_name);
+
+                Resources resources = getResources();
+                Configuration configuration = resources.getConfiguration();
+                DisplayMetrics displayMetrics = resources.getDisplayMetrics();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1){
+                    configuration.setLocale(locale);
+                } else{
+                    configuration.locale=locale;
+                }
+                if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N){
+                    getApplicationContext().createConfigurationContext(configuration);
+                } else {
+                    resources.updateConfiguration(configuration,displayMetrics);
+                }
+
+                finish();
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+            }
+        });
     }
 
     public View getTabView(int position) {
