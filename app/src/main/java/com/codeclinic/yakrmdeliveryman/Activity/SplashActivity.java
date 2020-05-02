@@ -8,12 +8,12 @@ import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
 import com.codeclinic.yakrmdeliveryman.R;
 import com.codeclinic.yakrmdeliveryman.Utils.SessionManager;
 import com.codeclinic.yakrmdeliveryman.Utils.UserDeliveryInfo;
@@ -33,6 +33,7 @@ public class SplashActivity extends AppCompatActivity {
     SessionManager sessionManager;
 
     private static final int REQUEST_CHECK_SETTINGS = 35;
+
     boolean value;
 
 
@@ -44,19 +45,12 @@ public class SplashActivity extends AppCompatActivity {
         sessionManager = new SessionManager(this);
         sessionManager.putLanguage("Language", "en");
 
-        //displayLocationSettingsRequest();
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
+        displayLocationSettingsRequest();
 
-                    callActivity();
-
-            }
-        }, 3000);
 
     }
 
-    /*void displayLocationSettingsRequest() {
+    void displayLocationSettingsRequest() {
         final GoogleApiClient googleApiClient = new GoogleApiClient.Builder(this).addApi(LocationServices.API).build();
         googleApiClient.connect();
 
@@ -116,21 +110,18 @@ public class SplashActivity extends AppCompatActivity {
                 }
             }
         });
-    }*/
+    }
 
-    /*@Override
+    @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == 200) {
-            if (ContextCompat.checkSelfPermission(SplashActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(SplashActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                callActivity();
-            } else {
-                Toast.makeText(this, "You have to allow all the permissions to access location", Toast.LENGTH_SHORT).show();
-            }
+        if (requestCode == 200 && grantResults[0] == -1 && grantResults[1] == -1) {
+            isPermissionGranted();
+        } else {
+            callActivity();
         }
-    }*/
+    }
 
-    /*public boolean isPermissionGranted() {
+    public boolean isPermissionGranted() {
         if (Build.VERSION.SDK_INT >= 23) {
             if (ContextCompat.checkSelfPermission(SplashActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(SplashActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 value = true;
@@ -142,10 +133,21 @@ public class SplashActivity extends AppCompatActivity {
             value = true;
         }
         return value;
-    }*/
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 35 && resultCode == 0) {
+            displayLocationSettingsRequest();
+        } else {
+            if (isPermissionGranted()) {
+                callActivity();
+            }
+        }
+    }
 
     void callActivity() {
-
         if (sessionManager.isLoggedIn()) {
 
             Intent intent = new Intent(SplashActivity.this, MainActivity.class);

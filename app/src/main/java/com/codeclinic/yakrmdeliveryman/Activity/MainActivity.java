@@ -10,7 +10,6 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +17,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +31,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.codeclinic.yakrmdeliveryman.Fragment.OrderlistFragment;
+import com.codeclinic.yakrmdeliveryman.LocationUpdates.BackgroundLocationUpdateService;
 import com.codeclinic.yakrmdeliveryman.R;
 import com.codeclinic.yakrmdeliveryman.Utils.SessionManager;
 import com.google.android.material.navigation.NavigationView;
@@ -47,14 +48,14 @@ public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
 
-    private String tabTitles[];
+    private String[] tabTitles;
     private int[] tabimageResId = {R.drawable.ic_tab_new_order, R.drawable.ic_tab_new_order,R.drawable.ic_tab_new_order};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        startService(new Intent(this, BackgroundLocationUpdateService.class));
         final Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -224,6 +225,7 @@ public class MainActivity extends AppCompatActivity {
                         @SuppressLint("StaticFieldLeak")
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
+                            stopService(new Intent(MainActivity.this, BackgroundLocationUpdateService.class));
                             drawer.closeDrawer(GravityCompat.START);
                             if (findViewById(R.id.frame_contaner).getVisibility() == View.VISIBLE) {
                                 findViewById(R.id.frame_contaner).setVisibility(View.GONE);
@@ -300,9 +302,9 @@ public class MainActivity extends AppCompatActivity {
     public View getTabView(int position) {
         // Given you have a custom layout in `res/layout/custom_tab.xml` with a TextView and ImageView
         View v = LayoutInflater.from(MainActivity.this).inflate(R.layout.custome_tab_view, null);
-        TextView tv_tab_title = (TextView) v.findViewById(R.id.tv_tab_title);
+        TextView tv_tab_title = v.findViewById(R.id.tv_tab_title);
         tv_tab_title.setText(tabTitles[position]);
-        ImageView img = (ImageView) v.findViewById(R.id.img_tab_icon);
+        ImageView img = v.findViewById(R.id.img_tab_icon);
         img.setImageResource(tabimageResId[position]);
         return v;
     }

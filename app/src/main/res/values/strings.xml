@@ -503,6 +503,9 @@
     <string name="additional_notes">Additional Notes</string>
     <string name="accept_order">Accept Order</string>
 
+    <!--google map key-->
+    <string name="google_maps_key">AIzaSyDuio1SeutMjrH3YpZux-J7ahjolmQohrM</string>
+
     <string-array name="tab">
         <item>New</item>
         <item>Accepted</item>
