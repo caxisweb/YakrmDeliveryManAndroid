@@ -505,6 +505,8 @@
 
     <!--google map key-->
     <string name="google_maps_key">AIzaSyDuio1SeutMjrH3YpZux-J7ahjolmQohrM</string>
+    <string name="direction">Direction</string>
+    <string name="complete">Complete</string>
 
     <string-array name="tab">
         <item>New</item>

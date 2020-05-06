@@ -455,6 +455,8 @@
     <string name="driver_detail">تفاصيل مندوب التوصيل</string>
     <string name="additional_notes">ملاحظات اضافية</string>
     <string name="accept_order">Accept Order</string>
+    <string name="direction">Direction</string>
+    <string name="complete">Complete</string>
 
     <string-array name="tab">
         <item>اطلب الأن</item>

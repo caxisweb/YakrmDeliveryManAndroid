@@ -180,6 +180,10 @@ public class MainActivity extends AppCompatActivity {
                     FragmentManager fragmentManager=getSupportFragmentManager();
                     fragmentManager.beginTransaction().replace(R.id.frame_contaner, fragment).commit();
 
+                }else if(tab.getPosition()==2){
+                    Fragment fragment = new OrderlistFragment("5");
+                    FragmentManager fragmentManager=getSupportFragmentManager();
+                    fragmentManager.beginTransaction().replace(R.id.frame_contaner, fragment).commit();
                 }
             }
 

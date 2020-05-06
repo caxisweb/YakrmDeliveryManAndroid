@@ -14,7 +14,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class RestClass {
 
-    public static String ImageBaseURL = "https://www.yakrm.com/assets/uploads/order_images/";
+    public static String ImageBaseURL = "https://test.yakrm.com/assets/uploads/order_images/";
     //public static final String BASE_URL = "https://www.yakrm.com/api/";//http://www.codeclinic.in/demo/yakrm/api/ http://yakrm.com/api/
     public static final String BASE_URL = "http://test.yakrm.com/api/";//http://www.codeclinic.in/demo/yakrm/api/ http://yakrm.com/api/
     private static Retrofit retrofit = null;

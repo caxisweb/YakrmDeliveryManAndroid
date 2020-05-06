@@ -1,6 +1,8 @@
 package com.codeclinic.yakrmdeliveryman.Activity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -40,15 +42,19 @@ public class OrderDetailActivity extends AppCompatActivity {
     API apiService;
 
     String order_id;
+    String str_home_lat,str_home_long,str_shop_lat,str_shop_long;
+
     CardView card_image;
     TextView tv_order_id,tv_order_status,tv_product_count,tv_home_address,tv_store_address,tv_notes;
     TextView tv_product_cost,tv_servicetax,tv_delivery_charge;
     TextView tv_delivery_boy,tv_delivery_contact;
     LinearLayout lv_productlist,lv_payment_detail,lv_payment_add;
+    LinearLayout lv_notes,lv_home_address,lv_store_address;
     ImageView img_product;
     ImageView img_back;
     EditText edt_amount;
-    Button btn_accept,btn_payment;
+    Button btn_accept,btn_payment,btn_chat,btn_complete;
+    CardView btn_home_address,btn_shop_address;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -81,7 +87,7 @@ public class OrderDetailActivity extends AppCompatActivity {
         tv_order_status=findViewById(R.id.tv_order_status);
         tv_product_count=findViewById(R.id.tv_product_count);
         tv_home_address=findViewById(R.id.tv_home_address);
-        tv_store_address=findViewById(R.id.tv_store_address);
+        tv_store_address=findViewById(R.id.tv_shop_address);
         tv_notes=findViewById(R.id.tv_notes);
 
         tv_product_cost=findViewById(R.id.tv_product_cost);
@@ -97,11 +103,20 @@ public class OrderDetailActivity extends AppCompatActivity {
         lv_payment_detail=findViewById(R.id.lv_payment_detail);
         lv_payment_add=findViewById(R.id.lv_payment_add);
 
+        lv_notes=findViewById(R.id.lv_notes);
+        lv_home_address=findViewById(R.id.lv_home_address);
+        lv_store_address=findViewById(R.id.lv_shop_address);
+
         card_image = findViewById(R.id.card_image);
         img_product=findViewById(R.id.img_product);
 
         btn_accept=findViewById(R.id.btn_accept);
         btn_payment=findViewById(R.id.btn_addpayment);
+        btn_chat=findViewById(R.id.btn_chat);
+        btn_complete=findViewById(R.id.btn_complete);
+
+        btn_home_address=findViewById(R.id.btn_home_address);
+        btn_shop_address=findViewById(R.id.btn_shop_address);
 
         progressDialog.setMessage(getResources().getString(R.string.Please_Wait));
         progressDialog.setIndeterminate(true);
@@ -124,23 +139,40 @@ public class OrderDetailActivity extends AppCompatActivity {
 
                         tv_order_id.setText(getString(R.string.order_id)+" : "+response.body().getId());
                         tv_product_count.setText(getString(R.string.product)+" : "+response.body().getOrderDetail().size());
+
+                        if(response.body().getShopAddress()==null){
+                            lv_store_address.setVisibility(View.GONE);
+                        }else{
+                            lv_store_address.setVisibility(View.VISIBLE);
+                            tv_store_address.setText(response.body().getShopAddress());
+                            str_shop_lat=response.body().getShopLatitude();
+                            str_shop_long=response.body().getShopLongitude();
+                        }
+
+                        str_home_lat=response.body().getUserLatitude();
+                        str_home_long=response.body().getUserLongitude();
+
                         tv_home_address.setText(response.body().getUserAddress());
-                        tv_store_address.setText(response.body().getShopAddress());
+
 
                         if(response.body().getOrder_status().equals("1")){
                             tv_order_status.setText(getString(R.string.pending));
                             lv_payment_detail.setVisibility(View.GONE);
                             btn_accept.setVisibility(View.VISIBLE);
                             btn_payment.setVisibility(View.GONE);
+                            btn_chat.setVisibility(View.GONE);
 
-                        }else{
+                        }else {
+
                             tv_order_status.setText(getString(R.string.accept));
                             btn_accept.setVisibility(View.GONE);
+                            btn_chat.setVisibility(View.VISIBLE);
 
                             if(response.body().getPrice().equals("0")){
                                 lv_payment_add.setVisibility(View.VISIBLE);
                                 btn_payment.setVisibility(View.VISIBLE);
                             }else {
+                                btn_complete.setVisibility(View.VISIBLE);
                                 lv_payment_detail.setVisibility(View.VISIBLE);
                                 tv_product_cost.setText(response.body().getPrice()+ getString(R.string.Sr));
                             }
@@ -148,6 +180,7 @@ public class OrderDetailActivity extends AppCompatActivity {
 
                         if(response.body().getNotes()==null){
                             //tv_notes.setText(response.body().getNotes());
+                            lv_notes.setVisibility(View.GONE);
                         }else{
                             tv_notes.setText(response.body().getNotes());
                         }
@@ -213,6 +246,28 @@ public class OrderDetailActivity extends AppCompatActivity {
                     callupdatePayment(amount);
                 }
 
+            }
+        });
+
+        btn_home_address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Uri gmmIntentUri = Uri.parse("google.navigation:q=" + str_home_lat + "," + str_home_long);
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+            }
+        });
+
+        btn_shop_address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Uri gmmIntentUri = Uri.parse("google.navigation:q=" + str_shop_lat + "," + str_shop_long);
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
             }
         });
     }
