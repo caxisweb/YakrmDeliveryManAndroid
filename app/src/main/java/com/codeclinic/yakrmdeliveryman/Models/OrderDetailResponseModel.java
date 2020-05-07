@@ -43,12 +43,21 @@ public class OrderDetailResponseModel {
     @SerializedName("price")
     @Expose
     private String price;
+    @SerializedName("service_charge")
+    @Expose
+    private String service_charge;
+    @SerializedName("order_charge")
+    @Expose
+    private String order_charge;
     @SerializedName("order_image")
     @Expose
     private String order_image;
     @SerializedName("notes")
     @Expose
     private String notes;
+    @SerializedName("is_payment_complete")
+    @Expose
+    private String is_payment_complete ;
     @SerializedName("created_at")
     @Expose
     private String createdAt;
@@ -164,6 +173,22 @@ public class OrderDetailResponseModel {
         this.price = price;
     }
 
+    public String getService_charge() {
+        return service_charge;
+    }
+
+    public void setService_charge(String service_charge) {
+        this.service_charge = service_charge;
+    }
+
+    public String getOrder_charge() {
+        return order_charge;
+    }
+
+    public void setOrder_charge(String order_charge) {
+        this.order_charge = order_charge;
+    }
+
     public String getCreatedAt() {
         return createdAt;
     }
@@ -218,6 +243,14 @@ public class OrderDetailResponseModel {
 
     public void setNotes(String notes) {
         this.notes = notes;
+    }
+
+    public String getIs_payment_complete() {
+        return is_payment_complete;
+    }
+
+    public void setIs_payment_complete(String is_payment_complete) {
+        this.is_payment_complete = is_payment_complete;
     }
 
     public List<ProductListModel> getOrderDetail() {
