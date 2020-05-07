@@ -176,12 +176,12 @@ public class OrderDetailActivity extends AppCompatActivity {
                             edt_amount.setEnabled(false);
                         }else if(response.body().getOrder_status().equals("5")){
 
-                            tv_order_status.setText(getString(R.string.complete));
+                            tv_order_status.setText(getString(R.string.delivered));
                             btn_payment.setVisibility(View.GONE);
                             btn_chat.setVisibility(View.GONE);
                             lv_footer.setVisibility(View.GONE);
-                        }
-                        else {
+
+                        } else {
 
                             tv_order_status.setText(getString(R.string.accept));
                             btn_accept.setVisibility(View.GONE);

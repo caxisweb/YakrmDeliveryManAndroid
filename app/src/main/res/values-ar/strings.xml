@@ -457,10 +457,12 @@
     <string name="accept_order">Accept Order</string>
     <string name="direction">Direction</string>
     <string name="complete">Complete</string>
+    <string name="payment_done_sucessfully">Payment Done Sucessfully</string>
 
     <string-array name="tab">
         <item>اطلب الأن</item>
         <item>طلباتي</item>
+        <item>تم التوصيل</item>
     </string-array>
 
 </resources>
