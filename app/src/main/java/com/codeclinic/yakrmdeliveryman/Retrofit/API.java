@@ -52,6 +52,14 @@ public interface API {
     Call<OrderStatusChange> orderStatusChange(@Header("Authorization") String header, @Body String Body);
 
     @Headers("Content-Type: application/json")
+    @POST("delivery_boy/orders/pickup_order")
+    Call<OrderStatusChange> orderDispatch(@Header("Authorization") String header, @Body String Body);
+
+    @Headers("Content-Type: application/json")
+    @POST("delivery_boy/orders/complete_order")
+    Call<OrderStatusChange> orderDilivered(@Header("Authorization") String header, @Body String Body);
+
+    @Headers("Content-Type: application/json")
     @POST("delivery_boy/orders/update_order_price_bydeliveryboy")
     Call<UpdatePaymentModel> updatePayment(@Header("Authorization") String header, @Body String Body);
 

@@ -508,6 +508,8 @@
     <string name="direction">Direction</string>
     <string name="complete">Complete</string>
     <string name="payment_done_sucessfully">Payment Done Sucessfully</string>
+    <string name="total_cost">Total Cost</string>
+    <string name="dispatch">Dispatch</string>
 
     <string-array name="tab">
         <item>New</item>

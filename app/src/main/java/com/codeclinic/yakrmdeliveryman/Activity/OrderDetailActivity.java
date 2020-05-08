@@ -43,17 +43,18 @@ public class OrderDetailActivity extends AppCompatActivity {
 
     String order_id;
     String str_home_lat,str_home_long,str_shop_lat,str_shop_long;
+    double total_amount;
 
     CardView card_image;
     TextView tv_order_id,tv_order_status,tv_product_count,tv_home_address,tv_store_address,tv_notes;
-    TextView tv_product_cost,tv_servicetax,tv_delivery_charge;
+    TextView tv_product_cost,tv_servicetax,tv_delivery_charge,tv_total_cost;
     TextView tv_delivery_boy,tv_delivery_contact;
     LinearLayout lv_productlist,lv_payment_detail,lv_payment_add,lv_payment_status,lv_footer;
     LinearLayout lv_notes,lv_home_address,lv_store_address;
     ImageView img_product;
     ImageView img_back;
     EditText edt_amount;
-    Button btn_accept,btn_payment,btn_chat,btn_complete;
+    Button btn_accept,btn_payment,btn_chat,btn_complete,btn_dispatch;
     CardView btn_home_address,btn_shop_address;
 
     @Override
@@ -93,6 +94,7 @@ public class OrderDetailActivity extends AppCompatActivity {
         tv_product_cost=findViewById(R.id.tv_product_cost);
         tv_servicetax=findViewById(R.id.tv_service_tax);
         tv_delivery_charge=findViewById(R.id.tv_delivery_charge);
+        tv_total_cost=findViewById(R.id.tv_total_cost);
 
         tv_delivery_boy=findViewById(R.id.tv_delivery_boy);
         tv_delivery_contact=findViewById(R.id.tv_delivery_contact);
@@ -116,6 +118,7 @@ public class OrderDetailActivity extends AppCompatActivity {
         btn_payment=findViewById(R.id.btn_addpayment);
         btn_chat=findViewById(R.id.btn_chat);
         btn_complete=findViewById(R.id.btn_complete);
+        btn_dispatch=findViewById(R.id.btn_dispatch);
 
         btn_home_address=findViewById(R.id.btn_home_address);
         btn_shop_address=findViewById(R.id.btn_shop_address);
@@ -165,6 +168,8 @@ public class OrderDetailActivity extends AppCompatActivity {
                             tv_product_cost.setText(response.body().getPrice()+ getString(R.string.Sr));
                             tv_servicetax.setText(response.body().getService_charge()+ getString(R.string.Sr));
                             tv_delivery_charge.setText(response.body().getOrder_charge()+getString(R.string.Sr));
+                            total_amount=Double.parseDouble(response.body().getPrice())+Double.parseDouble(response.body().getService_charge())+Double.parseDouble(response.body().getOrder_charge());
+                            tv_total_cost.setText(total_amount +getString(R.string.Sr));
                         }
 
                         if(response.body().getOrder_status().equals("1")){
@@ -174,6 +179,7 @@ public class OrderDetailActivity extends AppCompatActivity {
                             btn_payment.setVisibility(View.GONE);
                             btn_chat.setVisibility(View.GONE);
                             edt_amount.setEnabled(false);
+
                         }else if(response.body().getOrder_status().equals("5")){
 
                             tv_order_status.setText(getString(R.string.delivered));
@@ -181,9 +187,25 @@ public class OrderDetailActivity extends AppCompatActivity {
                             btn_chat.setVisibility(View.GONE);
                             lv_footer.setVisibility(View.GONE);
 
+                        }else if(response.body().getOrder_status().equals("6")){
+
+                            tv_order_status.setText(getString(R.string.button_cancel));
+                            btn_payment.setVisibility(View.GONE);
+                            btn_chat.setVisibility(View.GONE);
+                            lv_footer.setVisibility(View.GONE);
+
                         } else {
 
-                            tv_order_status.setText(getString(R.string.accept));
+                            if(response.body().getOrder_status().equals("2") && response.body().getIs_payment_complete().equals("1")){
+                                btn_dispatch.setVisibility(View.VISIBLE);
+                            }else if(response.body().getOrder_status().equals("4") && response.body().getIs_payment_complete().equals("1")){
+                                tv_order_status.setText(getString(R.string.dispatch));
+                                btn_complete.setVisibility(View.VISIBLE);
+                            }
+                            else {
+                                tv_order_status.setText(getString(R.string.accept));
+                            }
+
                             btn_accept.setVisibility(View.GONE);
                             btn_chat.setVisibility(View.VISIBLE);
                             edt_amount.setEnabled(true);
@@ -191,7 +213,6 @@ public class OrderDetailActivity extends AppCompatActivity {
                             if(response.body().getIs_payment_complete().equals("1")){
                                 btn_payment.setVisibility(View.GONE);
                                 lv_payment_status.setVisibility(View.VISIBLE);
-                                btn_complete.setVisibility(View.VISIBLE);
                             }else{
 
                                 btn_complete.setVisibility(View.GONE);
@@ -250,7 +271,7 @@ public class OrderDetailActivity extends AppCompatActivity {
         btn_accept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                callOrderAccept("1");
+                callOrderAccept();
             }
         });
 
@@ -290,9 +311,30 @@ public class OrderDetailActivity extends AppCompatActivity {
                 startActivity(mapIntent);
             }
         });
+
+        btn_dispatch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callOrderDispatch();
+            }
+        });
+
+        btn_dispatch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callOrderDispatch();
+            }
+        });
+
+        btn_complete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callOrderDilivered();
+            }
+        });
     }
 
-    void callOrderAccept(String status){
+    void callOrderAccept(){
 
         try {
 
@@ -372,5 +414,87 @@ public class OrderDetailActivity extends AppCompatActivity {
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    void callOrderDispatch(){
+
+        try {
+
+            progressDialog.setMessage(getResources().getString(R.string.Please_Wait));
+            progressDialog.setIndeterminate(true);
+            progressDialog.setCancelable(false);
+            progressDialog.show();
+
+            JSONObject data=new JSONObject();
+            data.put("order_id",order_id);
+
+            Call<OrderStatusChange> orderStatusChange=apiService.orderDispatch(sessionManager.getUserDetails().get(SessionManager.User_Token),data.toString());
+            orderStatusChange.enqueue(new Callback<OrderStatusChange>() {
+                @Override
+                public void onResponse(Call<OrderStatusChange> call, Response<OrderStatusChange> response) {
+
+                    progressDialog.dismiss();
+
+                    if(response.body().getStatus().equals("1")){
+                        finish();
+                        Toast.makeText(OrderDetailActivity.this,response.body().getMessage(),Toast.LENGTH_LONG).show();
+                    }else{
+                        Toast.makeText(OrderDetailActivity.this,response.body().getMessage(),Toast.LENGTH_LONG).show();
+                    }
+
+                }
+
+                @Override
+                public void onFailure(Call<OrderStatusChange> call, Throwable t) {
+                    progressDialog.dismiss();
+                    Toast.makeText(OrderDetailActivity.this,"server error",Toast.LENGTH_LONG).show();
+                }
+            });
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
+    void callOrderDilivered(){
+
+        try {
+
+            progressDialog.setMessage(getResources().getString(R.string.Please_Wait));
+            progressDialog.setIndeterminate(true);
+            progressDialog.setCancelable(false);
+            progressDialog.show();
+
+            JSONObject data=new JSONObject();
+            data.put("order_id",order_id);
+
+            Call<OrderStatusChange> orderStatusChange=apiService.orderDilivered(sessionManager.getUserDetails().get(SessionManager.User_Token),data.toString());
+            orderStatusChange.enqueue(new Callback<OrderStatusChange>() {
+                @Override
+                public void onResponse(Call<OrderStatusChange> call, Response<OrderStatusChange> response) {
+
+                    progressDialog.dismiss();
+
+                    if(response.body().getStatus().equals("1")){
+                        finish();
+                        Toast.makeText(OrderDetailActivity.this,response.body().getMessage(),Toast.LENGTH_LONG).show();
+                    }else{
+                        Toast.makeText(OrderDetailActivity.this,response.body().getMessage(),Toast.LENGTH_LONG).show();
+                    }
+
+                }
+
+                @Override
+                public void onFailure(Call<OrderStatusChange> call, Throwable t) {
+                    progressDialog.dismiss();
+                    Toast.makeText(OrderDetailActivity.this,"server error",Toast.LENGTH_LONG).show();
+                }
+            });
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 }
