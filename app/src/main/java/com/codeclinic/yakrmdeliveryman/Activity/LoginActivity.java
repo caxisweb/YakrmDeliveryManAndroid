@@ -18,6 +18,9 @@ import com.codeclinic.yakrmdeliveryman.R;
 import com.codeclinic.yakrmdeliveryman.Retrofit.API;
 import com.codeclinic.yakrmdeliveryman.Retrofit.RestClass;
 import com.codeclinic.yakrmdeliveryman.Utils.SessionManager;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -42,7 +45,8 @@ public class LoginActivity extends AppCompatActivity {
 
     String str_email, str_password;
     SessionManager sessionManager;
-    String str_email_regex = "[a-zA-Z0-9._-]+@[a-z]+.[a-z]+";
+    String notification_token="1";
+
 
     public boolean isEmpty(CharSequence character) {
         return character == null || character.length() == 0;
@@ -81,6 +85,12 @@ public class LoginActivity extends AppCompatActivity {
 
         apiService = RestClass.getClientDelivery().create(API.class);
 
+        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, new OnSuccessListener<InstanceIdResult>() {
+            @Override
+            public void onSuccess(InstanceIdResult instanceIdResult) {
+                notification_token= instanceIdResult.getToken();
+            }
+        });
 
         img_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,6 +115,7 @@ public class LoginActivity extends AppCompatActivity {
                 } else if (isEmpty(str_password)) {
                     Toast.makeText(LoginActivity.this, getResources().getString(R.string.Please_Enter_Password), Toast.LENGTH_SHORT).show();
                 } else {
+
                     progressDialog.setMessage(getResources().getString(R.string.Please_Wait));
                     progressDialog.setIndeterminate(true);
                     progressDialog.setCancelable(false);
@@ -115,7 +126,7 @@ public class LoginActivity extends AppCompatActivity {
                         jsonObject.put("mobile_no", str_email);
                         jsonObject.put("password", str_password);
                         jsonObject.put("device_type", "1");
-                        jsonObject.put("notification_token", "1");
+                        jsonObject.put("notification_token", notification_token);
 
                     } catch (JSONException e) {
                         e.printStackTrace();

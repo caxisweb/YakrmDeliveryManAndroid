@@ -510,6 +510,7 @@
     <string name="payment_done_sucessfully">Payment Done Sucessfully</string>
     <string name="total_cost">Total Cost</string>
     <string name="dispatch">Dispatch</string>
+    <string name="payment_is_still_pending">Payment Is still Pending</string>
 
     <string-array name="tab">
         <item>New</item>

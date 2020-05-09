@@ -40,7 +40,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/lv_payment_status"
+        android:layout_above="@+id/lv_footer2"
         android:layout_below="@+id/lv_header">
 
         <LinearLayout
@@ -809,6 +809,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="14dp"
+                        android:layout_marginLeft="5dp"
                         android:text="@string/deliveryboy_name"/>
 
                     <TextView
@@ -816,6 +817,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
+                        android:padding="5dp"
                         android:textSize="14dp"
                         android:text="@string/contact"/>
 
@@ -827,12 +829,18 @@
     </ScrollView>
 
     <LinearLayout
+        android:id="@+id/lv_footer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/lv_footer">
+
+    <LinearLayout
         android:id="@+id/lv_payment_status"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:gravity="center"
         android:visibility="gone"
-        android:layout_above="@+id/lv_footer"
         android:background="@color/toast_color">
 
         <TextView
@@ -842,6 +850,26 @@
             android:textColor="@color/white"
             android:textSize="14dp"
             android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lv_payment_pending"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payment_is_still_pending"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
 
     </LinearLayout>
 

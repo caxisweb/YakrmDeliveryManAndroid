@@ -1,8 +1,12 @@
 package com.codeclinic.yakrmdeliveryman.Activity;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,6 +21,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.codeclinic.yakrmdeliveryman.Models.OrderDetailResponseModel;
 import com.codeclinic.yakrmdeliveryman.Models.OrderStatusChange;
@@ -41,7 +47,9 @@ public class OrderDetailActivity extends AppCompatActivity {
     SessionManager sessionManager;
     API apiService;
 
-    String order_id;
+    boolean value;
+
+    String order_id,deliver_contact;
     String str_home_lat,str_home_long,str_shop_lat,str_shop_long;
     double total_amount;
 
@@ -49,7 +57,7 @@ public class OrderDetailActivity extends AppCompatActivity {
     TextView tv_order_id,tv_order_status,tv_product_count,tv_home_address,tv_store_address,tv_notes;
     TextView tv_product_cost,tv_servicetax,tv_delivery_charge,tv_total_cost;
     TextView tv_delivery_boy,tv_delivery_contact;
-    LinearLayout lv_productlist,lv_payment_detail,lv_payment_add,lv_payment_status,lv_footer;
+    LinearLayout lv_productlist,lv_payment_detail,lv_payment_add,lv_payment_status,lv_footer,lv_payment_pending;
     LinearLayout lv_notes,lv_home_address,lv_store_address;
     ImageView img_product;
     ImageView img_back;
@@ -105,6 +113,7 @@ public class OrderDetailActivity extends AppCompatActivity {
         lv_payment_detail=findViewById(R.id.lv_payment_detail);
         lv_payment_add=findViewById(R.id.lv_payment_add);
         lv_payment_status=findViewById(R.id.lv_payment_status);
+        lv_payment_pending=findViewById(R.id.lv_payment_pending);
         lv_footer=findViewById(R.id.lv_footer);
 
         lv_notes=findViewById(R.id.lv_notes);
@@ -163,13 +172,16 @@ public class OrderDetailActivity extends AppCompatActivity {
                         if(response.body().getPrice().equals("0")){
                             lv_payment_add.setVisibility(View.VISIBLE);
                             btn_payment.setVisibility(View.VISIBLE);
+                            btn_payment.setVisibility(View.VISIBLE);
                         }else {
+                            btn_payment.setVisibility(View.GONE);
                             lv_payment_detail.setVisibility(View.VISIBLE);
                             tv_product_cost.setText(response.body().getPrice()+ getString(R.string.Sr));
                             tv_servicetax.setText(response.body().getService_charge()+ getString(R.string.Sr));
                             tv_delivery_charge.setText(response.body().getOrder_charge()+getString(R.string.Sr));
                             total_amount=Double.parseDouble(response.body().getPrice())+Double.parseDouble(response.body().getService_charge())+Double.parseDouble(response.body().getOrder_charge());
                             tv_total_cost.setText(total_amount +getString(R.string.Sr));
+                            lv_payment_pending.setVisibility(View.VISIBLE);
                         }
 
                         if(response.body().getOrder_status().equals("1")){
@@ -213,10 +225,9 @@ public class OrderDetailActivity extends AppCompatActivity {
                             if(response.body().getIs_payment_complete().equals("1")){
                                 btn_payment.setVisibility(View.GONE);
                                 lv_payment_status.setVisibility(View.VISIBLE);
+                                lv_payment_pending.setVisibility(View.GONE);
                             }else{
-
                                 btn_complete.setVisibility(View.GONE);
-                                btn_payment.setVisibility(View.VISIBLE);
                                 lv_payment_status.setVisibility(View.GONE);
                             }
                         }
@@ -227,6 +238,8 @@ public class OrderDetailActivity extends AppCompatActivity {
                         }else{
                             tv_notes.setText(response.body().getNotes());
                         }
+
+                        deliver_contact=response.body().getPhone();
 
                         for(int i=0;i<response.body().getOrderDetail().size();i++){
 
@@ -330,6 +343,20 @@ public class OrderDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 callOrderDilivered();
+            }
+        });
+
+        tv_delivery_contact.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("MissingPermission")
+            @Override
+            public void onClick(View view) {
+                if(isPermissionGranted()) {
+                    Intent callIntent = new Intent(Intent.ACTION_CALL);
+                    callIntent.setData(Uri.parse("tel:"+deliver_contact));
+                    startActivity(callIntent);
+                }else{
+                    Toast.makeText(OrderDetailActivity.this, "Permission needed to Call Phone", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -496,5 +523,19 @@ public class OrderDetailActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+    }
+
+    public boolean isPermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (ContextCompat.checkSelfPermission(OrderDetailActivity.this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED ) {
+                value = true;
+            } else {
+                ActivityCompat.requestPermissions(OrderDetailActivity.this, new String[]{"android.permission.CALL_PHONE"}, 200);
+                value = false;
+            }
+        } else {
+            value = true;
+        }
+        return value;
     }
 }
