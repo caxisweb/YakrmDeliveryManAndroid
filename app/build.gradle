@@ -65,5 +65,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-iid:18.0.0'
     implementation 'com.google.firebase:firebase-messaging:18.0.0'
     implementation 'com.google.firebase:firebase-crash:16.2.1'
+    implementation 'com.google.firebase:firebase-database:18.0.0'
 }
 //inforaamitsolutions(google Acc.)

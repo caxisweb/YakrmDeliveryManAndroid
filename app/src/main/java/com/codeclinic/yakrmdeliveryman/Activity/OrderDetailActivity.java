@@ -24,6 +24,7 @@ import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.codeclinic.yakrmdeliveryman.ChatModule.CustomerChatActivity;
 import com.codeclinic.yakrmdeliveryman.Models.OrderDetailResponseModel;
 import com.codeclinic.yakrmdeliveryman.Models.OrderStatusChange;
 import com.codeclinic.yakrmdeliveryman.Models.UpdatePaymentModel;
@@ -357,6 +358,22 @@ public class OrderDetailActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(OrderDetailActivity.this, "Permission needed to Call Phone", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        btn_chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle b = new Bundle();
+                Intent intent = new Intent(OrderDetailActivity.this, CustomerChatActivity.class);
+                b.putString("orderID", order_id);
+                b.putString("customerID", deliver_contact);
+                b.putString("driverID", deliver_contact);
+                b.putString("driverName", tv_delivery_boy.getText().toString());
+                b.putString("customerName", sessionManager.getUserDetails().get(SessionManager.User_Name));
+                b.putString("type", "1");
+                intent.putExtras(b);
+                startActivity(intent);
             }
         });
     }
