@@ -50,7 +50,7 @@ public class OrderDetailActivity extends AppCompatActivity {
 
     boolean value;
 
-    String order_id,deliver_contact;
+    String order_id,deliver_contact,delivery_boy_name,notification_token;
     String str_home_lat,str_home_long,str_shop_lat,str_shop_long;
     double total_amount;
 
@@ -241,6 +241,8 @@ public class OrderDetailActivity extends AppCompatActivity {
                         }
 
                         deliver_contact=response.body().getPhone();
+                        delivery_boy_name=response.body().getName();
+                        notification_token=response.body().getNotification_token();
 
                         for(int i=0;i<response.body().getOrderDetail().size();i++){
 
@@ -371,6 +373,7 @@ public class OrderDetailActivity extends AppCompatActivity {
                 b.putString("driverID", deliver_contact);
                 b.putString("driverName", tv_delivery_boy.getText().toString());
                 b.putString("customerName", sessionManager.getUserDetails().get(SessionManager.User_Name));
+                b.putString("token", notification_token);
                 b.putString("type", "1");
                 intent.putExtras(b);
                 startActivity(intent);

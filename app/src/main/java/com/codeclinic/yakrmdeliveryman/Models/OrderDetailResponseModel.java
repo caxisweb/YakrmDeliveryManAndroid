@@ -73,6 +73,9 @@ public class OrderDetailResponseModel {
     @SerializedName("phone")
     @Expose
     private String phone;
+    @SerializedName("notification_token")
+    @Expose
+    private String notification_token;
     @SerializedName("order_detail")
     @Expose
     private List<ProductListModel> productList = null;
@@ -227,6 +230,14 @@ public class OrderDetailResponseModel {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getNotification_token() {
+        return notification_token;
+    }
+
+    public void setNotification_token(String notification_token) {
+        this.notification_token = notification_token;
     }
 
     public String getOrder_image() {
