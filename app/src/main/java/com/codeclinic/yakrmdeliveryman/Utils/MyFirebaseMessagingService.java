@@ -52,30 +52,30 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         if (remoteMessage.getData().size() > 0) {
             Log.d(TAG, "Message data payload: " + remoteMessage.getData());
         }
-        if (remoteMessage.getNotification() != null) {
 
-            Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
-            message = remoteMessage.getNotification().getBody();
-            str_title = remoteMessage.getNotification().getTitle();
 
-            if (remoteMessage.getData() != null) {
+        Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
+        /*message = remoteMessage.getNotification().getBody();
+        str_title = remoteMessage.getNotification().getTitle();*/
 
-                notiFor = remoteMessage.getData().get("noti_for");
-                if (!isEmpty(remoteMessage.getData().get("senderName"))) {
-                    str_title = remoteMessage.getData().get("senderName");
-                }
-                orderID = remoteMessage.getData().get("orderID");
-                customerID = remoteMessage.getData().get("customerID");
-                driverID = remoteMessage.getData().get("driverID");
-                driverName = remoteMessage.getData().get("driverName");
-                customerName = remoteMessage.getData().get("customerName");
-                senderName = remoteMessage.getData().get("senderName");
-                token = remoteMessage.getData().get("token");
-                type = remoteMessage.getData().get("type");
+        if (remoteMessage.getData().get("noti_for").equals("chat")) {
 
-                notification_type = remoteMessage.getData().get("noti_type");
-
+            notiFor = remoteMessage.getData().get("noti_for");
+            if (!isEmpty(remoteMessage.getData().get("senderName"))) {
+                str_title = remoteMessage.getData().get("senderName");
             }
+            message = remoteMessage.getData().get("message");
+            orderID = remoteMessage.getData().get("orderID");
+            customerID = remoteMessage.getData().get("customerID");
+            driverID = remoteMessage.getData().get("driverID");
+            driverName = remoteMessage.getData().get("driverName");
+            customerName = remoteMessage.getData().get("customerName");
+            senderName = remoteMessage.getData().get("senderName");
+            token = remoteMessage.getData().get("token");
+            type = remoteMessage.getData().get("type");
+
+            notification_type = remoteMessage.getData().get("noti_type");
+
         } else {
 
             str_title = remoteMessage.getData().get("subject");
