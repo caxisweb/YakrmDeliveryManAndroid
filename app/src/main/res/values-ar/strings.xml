@@ -454,13 +454,14 @@
     <string name="select_what_you_want">اختر من القائمة</string>
     <string name="driver_detail">تفاصيل مندوب التوصيل</string>
     <string name="additional_notes">ملاحظات اضافية</string>
-    <string name="accept_order">Accept Order</string>
-    <string name="direction">Direction</string>
-    <string name="complete">Complete</string>
-    <string name="payment_done_sucessfully">Payment Done Sucessfully</string>
-    <string name="total_cost">Total Cost</string>
-    <string name="dispatch">Dispatch</string>
-    <string name="payment_is_still_pending">Payment Is still Pending</string>
+    <string name="accept_order">قبول الطلب</string>
+    <string name="direction">الاتجاه</string>
+    <string name="complete">اكمل</string>
+    <string name="payment_done_sucessfully">تم الدفع بنجاح</string>
+    <string name="total_cost">التكلفة الإجمالية</string>
+    <string name="dispatch">يتم ارسال الطلب</string>
+    <string name="payment_is_still_pending">الدفع لا يزال معلقًا</string>
+    <string name="chat_with">الدردشة مع</string>
 
     <string-array name="tab">
         <item>اطلب الأن</item>

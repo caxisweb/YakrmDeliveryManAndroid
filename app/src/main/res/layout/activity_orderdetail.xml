@@ -586,15 +586,17 @@
                     android:orientation="vertical">
 
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:orientation="horizontal"
                         android:layout_marginTop="5dp">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
                             android:textSize="12dp"
                             android:textStyle="bold"
                             android:background="@color/white"
@@ -610,17 +612,19 @@
                             android:background="@color/white"
                             android:text="0 Sr" />
 
-                    </RelativeLayout>
+                    </LinearLayout>
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp">
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
                             android:background="@color/white"
                             android:text="@string/service_tax"
                             android:textSize="12dp"
@@ -636,17 +640,18 @@
                             android:background="@color/white"
                             android:text="0 Sr" />
 
-                    </RelativeLayout>
+                    </LinearLayout>
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:orientation="horizontal"
                         android:layout_marginTop="3dp">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
                             android:textSize="12dp"
                             android:textStyle="bold"
                             android:background="@color/white"
@@ -662,17 +667,18 @@
                             android:background="@color/white"
                             android:text="0 Sr" />
 
-                    </RelativeLayout>
+                    </LinearLayout>
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:orientation="horizontal"
                         android:layout_marginTop="5dp">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
                             android:textSize="12dp"
                             android:textStyle="bold"
                             android:background="@color/white"
@@ -688,7 +694,7 @@
                             android:background="@color/white"
                             android:text="0 Sr" />
 
-                    </RelativeLayout>
+                    </LinearLayout>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -889,7 +895,7 @@
             android:textSize="14dp"
             android:visibility="gone"
             android:background="@color/colorAccent"
-            android:text="Chat with" />
+            android:text="@string/chat_with" />
 
         <Button
             android:id="@+id/btn_accept"

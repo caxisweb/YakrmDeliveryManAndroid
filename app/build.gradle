@@ -66,5 +66,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:18.0.0'
     implementation 'com.google.firebase:firebase-crash:16.2.1'
     implementation 'com.google.firebase:firebase-database:18.0.0'
+    //implementation 'com.github.franmontiel:LocaleChanger:0.9.2'
 }
 //inforaamitsolutions(google Acc.)
