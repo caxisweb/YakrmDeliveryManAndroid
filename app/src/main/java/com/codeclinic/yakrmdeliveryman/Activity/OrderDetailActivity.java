@@ -169,7 +169,6 @@ public class OrderDetailActivity extends AppCompatActivity {
 
                         tv_home_address.setText(response.body().getUserAddress());
 
-
                         if(response.body().getPrice().equals("0")){
                             lv_payment_add.setVisibility(View.VISIBLE);
                             btn_payment.setVisibility(View.VISIBLE);
@@ -196,9 +195,14 @@ public class OrderDetailActivity extends AppCompatActivity {
                         }else if(response.body().getOrder_status().equals("5")){
 
                             tv_order_status.setText(getString(R.string.delivered));
+
                             btn_payment.setVisibility(View.GONE);
                             btn_chat.setVisibility(View.GONE);
-                            lv_footer.setVisibility(View.GONE);
+                            btn_accept.setVisibility(View.GONE);
+                            lv_payment_pending.setVisibility(View.GONE);
+                            lv_payment_status.setVisibility(View.GONE);
+
+                            //lv_footer.setVisibility(View.GONE);
 
                         }else if(response.body().getOrder_status().equals("6")){
 
