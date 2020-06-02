@@ -1,5 +1,6 @@
 package com.codeclinic.yakrmdeliveryman.Activity;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -45,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText edt_email, edt_password;
     TextView tv_signup, tv_forget_pass;
+    TextView tv_english, tv_arbic;
 
     API apiService;
     JSONObject jsonObject = new JSONObject();
@@ -78,6 +80,9 @@ public class LoginActivity extends AppCompatActivity {
         }
         edt_email = findViewById(R.id.edt_email);
         edt_password = findViewById(R.id.edt_password);
+
+        tv_english = findViewById(R.id.tv_english);
+        tv_arbic = findViewById(R.id.tv_arbic);
 
         tv_signup = findViewById(R.id.tv_signup);
         tv_forget_pass = findViewById(R.id.tv_forget_pass);
@@ -182,5 +187,103 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(i_otp);
             }
         });
+
+        tv_english.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint({"ResourceAsColor", "NewApi"})
+            @Override
+            public void onClick(View view) {
+
+                tv_english.setBackgroundColor(getApplicationContext().getColor(R.color.colorPrimary));
+                tv_english.setTextColor(getApplicationContext().getColor(R.color.white));
+
+                tv_arbic.setBackgroundColor(getApplicationContext().getColor(R.color.white));
+                tv_arbic.setTextColor(getApplicationContext().getColor(R.color.colorPrimary));
+
+                sessionManager.putLanguage("Language", "en");
+
+                /*if (Build.VERSION.SDK_INT >25) {
+                    LocaleChanger.setLocale(CommonMethods.SUPPORTED_LOCALES.get(0));
+                    ActivityRecreationHelper.recreate(SelectAppModeActivity.this, true);
+                }else{*/
+
+                    Locale locale = new Locale("en");
+
+                    Resources resources = getResources();
+                    Configuration configuration = resources.getConfiguration();
+                    DisplayMetrics displayMetrics = resources.getDisplayMetrics();
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1){
+                        configuration.setLocale(locale);
+                    } else{
+                        configuration.locale=locale;
+                    }
+
+                    if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N){
+                        getApplicationContext().createConfigurationContext(configuration);
+                    } else {
+                        resources.updateConfiguration(configuration,displayMetrics);
+                    }
+
+                    finish();
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                //}
+            }
+        });
+
+        tv_arbic.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint({"ResourceAsColor", "NewApi"})
+            @Override
+            public void onClick(View view) {
+
+                tv_arbic.setBackgroundColor(getApplicationContext().getColor(R.color.colorPrimary));
+                tv_arbic.setTextColor(getApplicationContext().getColor(R.color.white));
+
+                tv_english.setBackgroundColor(getApplicationContext().getColor(R.color.white));
+                tv_english.setTextColor(getApplicationContext().getColor(R.color.colorPrimary));
+
+                sessionManager.putLanguage("Language", "ar");
+                /*if (Build.VERSION.SDK_INT >25) {
+                    LocaleChanger.setLocale(CommonMethods.SUPPORTED_LOCALES.get(1));
+                    ActivityRecreationHelper.recreate(SelectAppModeActivity.this, true);
+                }else{*/
+
+                    Locale locale = new Locale("ar");
+
+                    Resources resources = getResources();
+                    Configuration configuration = resources.getConfiguration();
+                    DisplayMetrics displayMetrics = resources.getDisplayMetrics();
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1){
+                        configuration.setLocale(locale);
+                    } else{
+                        configuration.locale=locale;
+                    }
+
+                    if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N){
+                        getApplicationContext().createConfigurationContext(configuration);
+                    } else {
+                        resources.updateConfiguration(configuration,displayMetrics);
+                    }
+
+                    finish();
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                //}
+            }
+        });
+
+        if (language.equals("ar")) {
+
+            tv_arbic.setBackgroundColor(getApplicationContext().getColor(R.color.colorPrimary));
+            tv_arbic.setTextColor(getApplicationContext().getColor(R.color.white));
+
+            tv_english.setBackgroundColor(getApplicationContext().getColor(R.color.white));
+            tv_english.setTextColor(getApplicationContext().getColor(R.color.colorPrimary));
+
+        } else {
+
+            tv_arbic.setBackgroundColor(getApplicationContext().getColor(R.color.white));
+            tv_arbic.setTextColor(getApplicationContext().getColor(R.color.colorPrimary));
+
+            tv_english.setBackgroundColor(getApplicationContext().getColor(R.color.colorPrimary));
+            tv_english.setTextColor(getApplicationContext().getColor(R.color.white));
+        }
     }
 }
