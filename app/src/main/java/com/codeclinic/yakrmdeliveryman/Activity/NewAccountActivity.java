@@ -277,11 +277,11 @@ public class NewAccountActivity extends AppCompatActivity {
                 } else {
 
                     String temp_otp = null;
-                    if (language.equals("ar")) {
-                        temp_otp = str_edt_4 + str_edt_3 + str_edt_2 + str_edt_1;
-                    } else {
+                    //if (language.equals("ar")) {
+                      //  temp_otp = str_edt_4 + str_edt_3 + str_edt_2 + str_edt_1;
+                    //} else {
                         temp_otp = str_edt_1 + str_edt_2 + str_edt_3 + str_edt_4;
-                    }
+                    //}
 
                     progressDialog.setMessage(getResources().getString(R.string.Please_Wait));
                     progressDialog.setIndeterminate(true);
