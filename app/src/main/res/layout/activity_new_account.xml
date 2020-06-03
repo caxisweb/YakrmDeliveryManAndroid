@@ -76,6 +76,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/light_grey_border_background"
                 android:gravity="center"
+                android:layoutDirection="ltr"
                 android:orientation="horizontal">
 
                 <EditText
