@@ -1,6 +1,8 @@
 package com.codeclinic.yakrmdeliveryman.Retrofit;
 
 
+import com.codeclinic.yakrmdeliveryman.Models.ForgetPasswordNumberModel;
+import com.codeclinic.yakrmdeliveryman.Models.ForgotPasswordOTPModel;
 import com.codeclinic.yakrmdeliveryman.Models.LoginModel;
 import com.codeclinic.yakrmdeliveryman.Models.OrderDetailResponseModel;
 import com.codeclinic.yakrmdeliveryman.Models.OrderStatusChange;
@@ -38,6 +40,14 @@ public interface API {
     @Headers("Content-Type: application/json")
     @POST("delivery_boy/signin")
     Call<LoginModel> LOGIN_MODEL_CALL(@Body String Body);
+
+    @Headers("Content-Type: application/json")
+    @POST("delivery_boy/forget_password/checked_mobile")
+    Call<ForgetPasswordNumberModel> FORGET_PASSWORD_NUMBER_MODEL_CALL(@Body String Body);
+
+    @Headers("Content-Type: application/json")
+    @POST("delivery_boy/forget_password/verify_otp_reset_password")
+    Call<ForgotPasswordOTPModel> FORGOT_PASSWORD_OTP_MODEL_CALL(@Header("Authorization") String header, @Body String Body);
 
     @Headers("Content-Type: application/json")
     @POST("delivery_boy/orders/detail")

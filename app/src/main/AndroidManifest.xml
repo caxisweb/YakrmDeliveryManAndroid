@@ -41,6 +41,10 @@
             android:theme="@style/No_action_bar" />
 
         <activity
+            android:name=".Activity.ForgetPasswordActivity"
+            android:theme="@style/No_action_bar" />
+
+        <activity
             android:name=".Activity.NewAccountActivity"
             android:theme="@style/No_action_bar" />
 

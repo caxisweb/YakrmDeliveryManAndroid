@@ -464,8 +464,8 @@
     <string name="chat_with">الدردشة مع</string>
 
     <string-array name="tab">
-        <item>اطلب الأن</item>
-        <item>طلباتي</item>
+        <item>طلبات جديده</item>
+        <item>طلبات اقوم بتوصيلها</item>
         <item>تم التوصيل</item>
     </string-array>
 
