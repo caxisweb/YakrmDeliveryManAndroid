@@ -33,6 +33,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ForgetPasswordActivity extends AppCompatActivity {
+
     CardView main_detail_cardview, number_verify_cardview, main_change_pass_cardview;
     Button btn_send, btn_verify, btn_change_pass, btn_resend;
     ImageView img_back;
@@ -319,11 +320,12 @@ public class ForgetPasswordActivity extends AppCompatActivity {
                     Toast.makeText(ForgetPasswordActivity.this, "Enter Code", Toast.LENGTH_SHORT).show();
                 } else {
                     String temp_otp = null;
-                    if (language.equals("ar")) {
+                    /*if (language.equals("ar")) {
                         temp_otp = str_edt_4 + str_edt_3 + str_edt_2 + str_edt_1;
                     } else {
                         temp_otp = str_edt_1 + str_edt_2 + str_edt_3 + str_edt_4;
-                    }
+                    }*/
+                    temp_otp = str_edt_1 + str_edt_2 + str_edt_3 + str_edt_4;
 
                     if (temp_otp.equals(str_otp)) {
                         number_verify_cardview.setVisibility(View.GONE);
