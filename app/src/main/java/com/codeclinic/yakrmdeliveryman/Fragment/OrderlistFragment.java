@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.codeclinic.yakrmdeliveryman.Models.NotificationCountModel;
 import com.codeclinic.yakrmdeliveryman.Models.OrderListModel;
 import com.codeclinic.yakrmdeliveryman.Models.OrderlistResponseModel;
 import com.codeclinic.yakrmdeliveryman.R;
@@ -30,6 +31,8 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import static com.codeclinic.yakrmdeliveryman.Activity.MainActivity.textnotificationCount;
 
 public class OrderlistFragment extends Fragment {
 
@@ -90,6 +93,8 @@ public class OrderlistFragment extends Fragment {
 
                         MyOrderAdepter adepter = new MyOrderAdepter(myorderlist, getActivity());
                         rc_orderlist.setAdapter(adepter);
+                        getNotificationCount();
+
 
                     } else {
                         Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_LONG).show();
@@ -112,4 +117,27 @@ public class OrderlistFragment extends Fragment {
         return mainView;
     }
 
+    void getNotificationCount(){
+
+        Log.i("user_Token",sessionManager.getUserDetails().get(SessionManager.User_Token));
+        Call<NotificationCountModel> getOrderList=apiService.NOTIFICATION_COUNT(sessionManager.getUserDetails().get(SessionManager.User_Token));
+        getOrderList.enqueue(new Callback<NotificationCountModel>() {
+            @Override
+            public void onResponse(Call<NotificationCountModel> call, Response<NotificationCountModel> response) {
+
+
+                if(response.body().getStatus().equals("1")){
+                    textnotificationCount.setText(String.valueOf(response.body().getTotalNoti()));
+                }else{
+
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<NotificationCountModel> call, Throwable t) {
+
+            }
+        });
+    }
 }

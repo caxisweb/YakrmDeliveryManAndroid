@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     SessionManager sessionManager;
     CoordinatorLayout main_content;
     Drawable drawable;
-
+    public static TextView textnotificationCount;
     private TabLayout tabLayout;
 
     private String[] tabTitles;
@@ -324,6 +324,7 @@ public class MainActivity extends AppCompatActivity {
             final MenuItem menuItem5 = menu.findItem(R.id.action_user);
 
             View actionView3 = MenuItemCompat.getActionView(menuItem3);
+            textnotificationCount = actionView3.findViewById(R.id.noti_badge);
             View actionView5 = MenuItemCompat.getActionView(menuItem5);
 
             actionView3.setOnClickListener(new View.OnClickListener() {
@@ -353,7 +354,7 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_notification) {
             if (sessionManager.isLoggedIn()) {
-                //startActivity(new Intent(MainActivity.this, NotificationsActivity.class));
+                startActivity(new Intent(MainActivity.this, NotificationsActivity.class));
             } else {
                 //startActivity(new Intent(MainActivity.this, StartActivity.class));
             }

@@ -4,6 +4,8 @@ package com.codeclinic.yakrmdeliveryman.Retrofit;
 import com.codeclinic.yakrmdeliveryman.Models.ForgetPasswordNumberModel;
 import com.codeclinic.yakrmdeliveryman.Models.ForgotPasswordOTPModel;
 import com.codeclinic.yakrmdeliveryman.Models.LoginModel;
+import com.codeclinic.yakrmdeliveryman.Models.NotificationCountModel;
+import com.codeclinic.yakrmdeliveryman.Models.NotificationListModel;
 import com.codeclinic.yakrmdeliveryman.Models.OrderDetailResponseModel;
 import com.codeclinic.yakrmdeliveryman.Models.OrderStatusChange;
 import com.codeclinic.yakrmdeliveryman.Models.OrderlistResponseModel;
@@ -16,6 +18,7 @@ import io.reactivex.Single;
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.Multipart;
@@ -76,6 +79,14 @@ public interface API {
     @Headers("Content-Type: application/json")
     @POST("delivery_boy/profile/update_lat_long")
     Single<UpdateLocationModel> updateLocation(@Header("Authorization") String header, @Body String Body);
+
+    @Headers("Content-Type: application/json")
+    @GET("delivery_boy/notification/list")
+    Call<NotificationListModel> NOTIFICATION_LIST_MODEL_CALL(@Header("Authorization") String header);
+
+    @Headers("Content-Type: application/json")
+    @GET("delivery_boy/notification/list")
+    Call<NotificationCountModel> NOTIFICATION_COUNT(@Header("Authorization") String header);
 
     /*@Headers("Content-Type: application/json")
     @POST("registration_step_1")
