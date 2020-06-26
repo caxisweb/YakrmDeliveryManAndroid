@@ -85,7 +85,7 @@ public interface API {
     Call<NotificationListModel> NOTIFICATION_LIST_MODEL_CALL(@Header("Authorization") String header);
 
     @Headers("Content-Type: application/json")
-    @GET("delivery_boy/notification/list")
+    @GET("delivery_boy/notification/get_total_today_noti")
     Call<NotificationCountModel> NOTIFICATION_COUNT(@Header("Authorization") String header);
 
     /*@Headers("Content-Type: application/json")

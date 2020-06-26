@@ -1,6 +1,7 @@
 package com.codeclinic.yakrmdeliveryman.Utils;
 
 import android.annotation.SuppressLint;
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -119,6 +120,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 @SuppressLint("WrongConstant") NotificationChannel mChannel = new NotificationChannel(channelId, channelName, importance);
                 mChannel.enableLights(true);
                 mChannel.setLightColor(Color.RED);
+                mChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
                 mChannel.enableVibration(true);
                 mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
                 mChannel.setShowBadge(false);
