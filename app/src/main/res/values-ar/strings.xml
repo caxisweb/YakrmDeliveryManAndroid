@@ -462,6 +462,8 @@
     <string name="dispatch">يتم ارسال الطلب</string>
     <string name="payment_is_still_pending">الدفع لا يزال معلقًا</string>
     <string name="chat_with">الدردشة مع</string>
+    <string name="enter_amount">ادخل القيمة</string>
+    <string name="please_enter_amount">اضف تكلفة المنتجات</string>
 
     <string-array name="tab">
         <item>طلبات جديده</item>

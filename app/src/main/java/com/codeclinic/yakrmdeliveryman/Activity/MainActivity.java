@@ -278,7 +278,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     language_name = "en";
                 }
-                sessionManager.putLanguage("Language", language_name);
+                sessionManager.putLanguage("Langauage", language_name);
 
                 Locale locale = new Locale(language_name);
 

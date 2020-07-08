@@ -13,6 +13,9 @@ public class OrderlistResponseModel {
     @SerializedName("message")
     @Expose
     private String message;
+    @SerializedName("arab_message")
+    @Expose
+    private String arab_message;
     @SerializedName("data")
     @Expose
     private List<OrderListModel> orderlist = null;
@@ -39,5 +42,13 @@ public class OrderlistResponseModel {
 
     public void setData(List<OrderListModel> orderlist) {
         this.orderlist = orderlist;
+    }
+
+    public String getArab_message() {
+        return arab_message;
+    }
+
+    public void setArab_message(String arab_message) {
+        this.arab_message = arab_message;
     }
 }

@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.codeclinic.yakrmdeliveryman.Activity.LoginActivity;
 import com.codeclinic.yakrmdeliveryman.Models.NotificationCountModel;
 import com.codeclinic.yakrmdeliveryman.Models.OrderListModel;
 import com.codeclinic.yakrmdeliveryman.Models.OrderlistResponseModel;
@@ -97,7 +98,11 @@ public class OrderlistFragment extends Fragment {
 
 
                     } else {
-                        Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_LONG).show();
+                        if (sessionManager.getLanguage("Language", "en").equals("en")) {
+                            Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getActivity(), response.body().getArab_message(), Toast.LENGTH_SHORT).show();
+                        }
                     }
 
                 }

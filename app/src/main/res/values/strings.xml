@@ -512,6 +512,8 @@
     <string name="dispatch">Dispatch</string>
     <string name="payment_is_still_pending">Payment Is still Pending</string>
     <string name="chat_with">Chat with</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="please_enter_amount">Add cost of products</string>
 
     <string-array name="tab">
         <item>New</item>

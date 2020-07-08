@@ -161,9 +161,17 @@ public class LoginActivity extends AppCompatActivity {
                                 Intent i_otp = new Intent(LoginActivity.this, NewAccountActivity.class);
                                 i_otp.putExtra("token", response.body().getToken());
                                 startActivity(i_otp);
-                                Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                                if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
+                                    Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(LoginActivity.this, response.body().getArab_message(), Toast.LENGTH_SHORT).show();
+                                }
                             } else {
-                                Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                                if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
+                                    Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(LoginActivity.this, response.body().getArab_message(), Toast.LENGTH_SHORT).show();
+                                }
 
                             }
                         }
@@ -199,7 +207,7 @@ public class LoginActivity extends AppCompatActivity {
                 tv_arbic.setBackgroundColor(getApplicationContext().getColor(R.color.white));
                 tv_arbic.setTextColor(getApplicationContext().getColor(R.color.colorPrimary));
 
-                sessionManager.putLanguage("Language", "en");
+                sessionManager.putLanguage("Langauage", "en");
 
                 /*if (Build.VERSION.SDK_INT >25) {
                     LocaleChanger.setLocale(CommonMethods.SUPPORTED_LOCALES.get(0));

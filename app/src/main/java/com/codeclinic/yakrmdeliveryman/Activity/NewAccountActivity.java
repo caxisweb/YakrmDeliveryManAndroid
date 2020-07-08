@@ -313,7 +313,11 @@ public class NewAccountActivity extends AppCompatActivity {
                                 startActivity(new Intent(NewAccountActivity.this, LoginActivity.class));
                                 finish();
 
-                                Toast.makeText(NewAccountActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                                if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
+                                    Toast.makeText(NewAccountActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(NewAccountActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                                }
                             } else {
                                 if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
                                     Toast.makeText(NewAccountActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
@@ -389,9 +393,17 @@ public class NewAccountActivity extends AppCompatActivity {
                                     number_verify_cardview.setVisibility(View.VISIBLE);
                                     personal_detail_cardview.setVisibility(View.GONE);
 
-                                    Toast.makeText(NewAccountActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                                    if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
+                                        Toast.makeText(NewAccountActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        Toast.makeText(NewAccountActivity.this, response.body().getArab_message(), Toast.LENGTH_SHORT).show();
+                                    }
                                 } else {
-                                    Toast.makeText(NewAccountActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                                    if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
+                                        Toast.makeText(NewAccountActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        Toast.makeText(NewAccountActivity.this, response.body().getArab_message(), Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             }
 

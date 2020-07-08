@@ -11,6 +11,9 @@ public class UpdatePaymentModel {
     @SerializedName("message")
     @Expose
     private String message;
+    @SerializedName("arab_message")
+    @Expose
+    private String arab_message;
 
     public String getStatus() {
         return status;
@@ -28,4 +31,11 @@ public class UpdatePaymentModel {
         this.message = message;
     }
 
+    public String getArab_message() {
+        return arab_message;
+    }
+
+    public void setArab_message(String arab_message) {
+        this.arab_message = arab_message;
+    }
 }

@@ -11,6 +11,9 @@ public class VerifyOTPModel {
     @SerializedName("message")
     @Expose
     private String message;
+    @SerializedName("arab_message")
+    @Expose
+    private String arab_message;
     @SerializedName("token")
     @Expose
     private String token;
@@ -94,4 +97,11 @@ public class VerifyOTPModel {
         this.isActive = isActive;
     }
 
+    public String getArab_message() {
+        return arab_message;
+    }
+
+    public void setArab_message(String arab_message) {
+        this.arab_message = arab_message;
+    }
 }

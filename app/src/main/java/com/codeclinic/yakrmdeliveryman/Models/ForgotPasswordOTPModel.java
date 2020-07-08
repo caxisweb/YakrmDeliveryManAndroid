@@ -33,4 +33,8 @@ public class ForgotPasswordOTPModel {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    public void setArab_message(String arab_message) {
+        this.arab_message = arab_message;
+    }
 }

@@ -13,6 +13,9 @@ public class OrderDetailResponseModel {
     @SerializedName("message")
     @Expose
     private String message;
+    @SerializedName("arab_message")
+    @Expose
+    private String arab_message;
     @SerializedName("id")
     @Expose
     private String id;
@@ -270,5 +273,13 @@ public class OrderDetailResponseModel {
 
     public void setOrderDetail(List<ProductListModel> productList) {
         this.productList = productList;
+    }
+
+    public String getArab_message() {
+        return arab_message;
+    }
+
+    public void setArab_message(String arab_message) {
+        this.arab_message = arab_message;
     }
 }
