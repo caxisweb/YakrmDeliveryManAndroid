@@ -409,12 +409,12 @@ public class OrderDetailActivity extends AppCompatActivity {
                     progressDialog.dismiss();
 
                     if(response.body().getStatus().equals("1")){
-                        finish();
                         if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
                             Toast.makeText(OrderDetailActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(OrderDetailActivity.this, response.body().getArab_message(), Toast.LENGTH_SHORT).show();
                         }
+                        finish();
                     }else{
                         if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
                             Toast.makeText(OrderDetailActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
@@ -459,12 +459,12 @@ public class OrderDetailActivity extends AppCompatActivity {
                     progressDialog.dismiss();
 
                     if(response.body().getStatus().equals("1")){
-                        finish();
                         if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
                             Toast.makeText(OrderDetailActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(OrderDetailActivity.this, response.body().getArab_message(), Toast.LENGTH_SHORT).show();
                         }
+                        finish();
                     }else{
                         if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
                             Toast.makeText(OrderDetailActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
@@ -507,12 +507,12 @@ public class OrderDetailActivity extends AppCompatActivity {
                     progressDialog.dismiss();
 
                     if(response.body().getStatus().equals("1")){
-                        finish();
                         if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
                             Toast.makeText(OrderDetailActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(OrderDetailActivity.this, response.body().getArab_message(), Toast.LENGTH_SHORT).show();
                         }
+                        finish();
                     }else{
                         if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
                             Toast.makeText(OrderDetailActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
@@ -556,12 +556,12 @@ public class OrderDetailActivity extends AppCompatActivity {
                     progressDialog.dismiss();
 
                     if(response.body().getStatus().equals("1")){
-                        finish();
                         if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
                             Toast.makeText(OrderDetailActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(OrderDetailActivity.this, response.body().getArab_message(), Toast.LENGTH_SHORT).show();
                         }
+                        finish();
                     }else{
                         if (sessionManager.getLanguage("Langauage", "en").equals("en")) {
                             Toast.makeText(OrderDetailActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
