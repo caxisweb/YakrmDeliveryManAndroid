@@ -80,7 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/layout"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
 
             <LinearLayout
@@ -151,6 +151,7 @@
                 android:id="@+id/llayout_instruction_conditions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:background="?android:selectableItemBackground"
                 android:orientation="horizontal"
                 android:padding="5dp">

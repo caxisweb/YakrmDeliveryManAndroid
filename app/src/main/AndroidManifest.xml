@@ -64,6 +64,13 @@
             android:name=".Activity.NotificationsActivity"
             android:theme="@style/No_action_bar" />
 
+        <activity
+            android:name=".Activity.AboutApplicationActivity"
+            android:theme="@style/No_action_bar" />
+        <activity
+            android:name=".Activity.PersonalDataActivity"
+            android:theme="@style/No_action_bar" />
+
         <service android:name=".Utils.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

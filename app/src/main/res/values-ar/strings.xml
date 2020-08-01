@@ -452,7 +452,7 @@
     <string name="contact">وسائل الاتصال</string>
     <string name="payment">الدفع</string>
     <string name="select_what_you_want">اختر من القائمة</string>
-    <string name="driver_detail">تفاصيل مندوب التوصيل</string>
+    <string name="driver_detail">تفاصيل المستخدم / العميل</string>
     <string name="additional_notes">ملاحظات اضافية</string>
     <string name="accept_order">قبول الطلب</string>
     <string name="direction">الاتجاه</string>

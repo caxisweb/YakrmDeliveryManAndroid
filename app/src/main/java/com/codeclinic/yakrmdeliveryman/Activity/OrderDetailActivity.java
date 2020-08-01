@@ -269,6 +269,7 @@ public class OrderDetailActivity extends AppCompatActivity {
                             card_image.setVisibility(View.GONE);
                         }else{
                             card_image.setVisibility(View.VISIBLE);
+                            Log.i("image_url",RestClass.ImageBaseURL+response.body().getOrder_image());
                             Picasso.with(OrderDetailActivity.this).load(RestClass.ImageBaseURL+response.body().getOrder_image()).into(img_product);
                         }
 

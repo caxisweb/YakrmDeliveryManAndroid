@@ -31,6 +31,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.codeclinic.yakrmdeliveryman.Fragment.OrderlistFragment;
+import com.codeclinic.yakrmdeliveryman.Fragment.SupportContactFragment;
 import com.codeclinic.yakrmdeliveryman.LocationUpdates.BackgroundLocationUpdateService;
 import com.codeclinic.yakrmdeliveryman.R;
 import com.codeclinic.yakrmdeliveryman.Utils.SessionManager;
@@ -218,6 +219,69 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout llayout_english = header1.findViewById(R.id.llayout_english);
         final TextView tv_language_version = header1.findViewById(R.id.tv_language_version);
 
+        llayout_main_page.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawer.closeDrawer(GravityCompat.START);
+                tabLayout.setVisibility(View.VISIBLE);
+                /*if (findViewById(R.id.frame_contaner).getVisibility() == View.VISIBLE) {
+                    findViewById(R.id.frame_contaner).setVisibility(View.GONE);
+                    setTitle(getResources().getString(R.string.title_activity_main));
+                } else {*/
+                Fragment fragment = new OrderlistFragment("1");
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.frame_contaner, fragment).commit();
+                //}
+
+
+            }
+        });
+
+        layout_personal_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawer.closeDrawer(GravityCompat.START);
+                //tabLayout.setVisibility(View.GONE);
+                if (sessionManager.isLoggedIn()) {
+                    /*if (findViewById(R.id.frame_contaner).getVisibility() == View.VISIBLE) {
+                        findViewById(R.id.frame_contaner).setVisibility(View.GONE);
+                        setTitle(getResources().getString(R.string.title_activity_main));
+                    }*/
+                    startActivity(new Intent(MainActivity.this, PersonalDataActivity.class));
+                } else {
+                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                }
+            }
+        });
+
+        llayout_support_contact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (sessionManager.isLoggedIn()) {
+                    drawer.closeDrawer(GravityCompat.START);
+                    tabLayout.setVisibility(View.GONE);
+                    findViewById(R.id.frame_contaner).setVisibility(View.VISIBLE);
+                    toolbar.setTitle(getResources().getString(R.string.Support_And_Contact));
+                    SupportContactFragment fragment = null;
+                    fragment = new SupportContactFragment();
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    fragmentManager.beginTransaction().replace(R.id.frame_contaner, fragment).commit();
+                } else {
+                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                }
+            }
+        });
+
+        llayout_about_app.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawer.closeDrawer(GravityCompat.START);
+
+                startActivity(new Intent(MainActivity.this, AboutApplicationActivity.class));
+            }
+        });
+
+
         llayout_signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -361,9 +425,9 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }  else if (id == R.id.action_user) {
             if (sessionManager.isLoggedIn()) {
-                //startActivity(new Intent(DeliveryMain.this, PersonalDataActivity.class));
+                startActivity(new Intent(MainActivity.this, PersonalDataActivity.class));
             } else {
-                //startActivity(new Intent(DeliveryMain.this, StartActivity.class));
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
             return true;
         }

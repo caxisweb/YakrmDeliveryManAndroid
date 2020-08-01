@@ -1,6 +1,9 @@
 package com.codeclinic.yakrmdeliveryman.Retrofit;
 
 
+import com.codeclinic.yakrmdeliveryman.Models.AboutApplicationModel;
+import com.codeclinic.yakrmdeliveryman.Models.CountryListModel;
+import com.codeclinic.yakrmdeliveryman.Models.FeedBackModel;
 import com.codeclinic.yakrmdeliveryman.Models.ForgetPasswordNumberModel;
 import com.codeclinic.yakrmdeliveryman.Models.ForgotPasswordOTPModel;
 import com.codeclinic.yakrmdeliveryman.Models.LoginModel;
@@ -88,6 +91,17 @@ public interface API {
     @GET("delivery_boy/notification/get_total_today_noti")
     Call<NotificationCountModel> NOTIFICATION_COUNT(@Header("Authorization") String header);
 
+    @Headers("Content-Type: application/json")
+    @GET("get_all_country")
+    Call<CountryListModel> COUNTRY_LIST_MODEL_CALL();
+
+    @Headers("Content-Type: application/json")
+    @POST("add_feedback")
+    Call<FeedBackModel> FEED_BACK_MODEL_CALL(@Header("Authorization") String header, @Body String Body);
+
+    @Headers("Content-Type: application/json")
+    @GET("get_about_application")
+    Call<AboutApplicationModel> ABOUT_APPLICATION_MODEL_CALL();
     /*@Headers("Content-Type: application/json")
     @POST("registration_step_1")
     Call<RegistrationModel> REGISTRATION_MODEL_CALL(@Body String Body);
